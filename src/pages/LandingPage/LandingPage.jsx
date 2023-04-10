@@ -7,6 +7,7 @@ import img1 from "../../Assets/images/Group 7571.png";
 import img2 from "../../Assets/images/Group 7572.png";
 import img3 from "../../Assets/images/Frame 7.png";
 import Navbar from "../../component/navbar/Navbar";
+import layerImg from "../../Assets/images/Layer_1.png";
 
 const LandingPage = () => {
   // Modal Component implementation
@@ -39,9 +40,6 @@ const LandingPage = () => {
       <Navbar />
 
       <div className="Content">
-        <div className="joinn">
-          <img className="join" src={img3} alt="" />
-        </div>
         <div className="first">
           <div className="firstContent">
             <span>
@@ -58,6 +56,12 @@ const LandingPage = () => {
             <img className="img1" src={img1} alt="" />
           </div>
         </div>
+       <div className="join-layer">
+        <img className="layer-img rotate linear infinite" src={layerImg} alt="" />
+        <div className="joinn">
+          <img className="join" src={img3} alt="" />
+        </div>
+       </div>
 
         <div className="second">
           <div className="secondImg">
@@ -75,7 +79,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <Header_slider />
+      {/* <Header_slider /> */}
     </div>
   );
 };

@@ -1,141 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-.Content{
-    background-color: #FFFCEB;
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+.Content {
+  background-color: #fffceb;
 }
-.join{
-    height: 100px;
-    position: absolute;
-    bottom: 45%;
-    left: 45%;
-    transition: all 0.2s;
 
+.first {
+  padding: 2px 30px;
+  display: flex;
+  justify-content: space-around;
 }
-.join:hover{
-    transform: scale(1.2);
+.firstContent {
+  width: 480px;
+  font-size: 80px;
 }
-.first{
-    padding: 2px 30px;
-    display: flex;
-    justify-content: space-around;
+.anime1 {
+  color: #f33d5e;
 }
-.firstContent{
-    width: 480px;
-    font-size: 80px;
+.firstContent h1 {
+  line-height: 70px;
+  font-size: 70px;
+  font-family: "Anton", sans-serif;
+  font-weight: 100;
 }
-.anime1{
-    color: #F33D5E;
+.firstContent p {
+  font-size: 20px;
+  color: grey;
 }
-.firstContent h1{
-    line-height: 70px;
-    font-size: 70px;
-    font-family: 'Anton', sans-serif;
-    font-weight: 100;
-}
-.firstContent p{
-    font-size: 20px;
-    color: grey;
-}
-.firstImg{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.firstImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .img1 {
-    height:464px;
+  height: 464px;
 }
 
-.second{
-    padding: 2px 30px;
-    display: flex;
-    justify-content: space-around;
+// .join-layer:hover{
+//     transform: scale(2)
+// }
+.join {
+  height: 100px;
+  position: absolute;
+  bottom: 20%;
+  left: 45%;
+  transition: all 0.2s;
 }
-.secondContent{
-    width: 480px;
-    font-size: 80px;
+
+.layer-img {
+  height: 100px;
+  position: absolute;
+  bottom: 20%;
+  left: 45%;
 }
-.anime2{
-    color: #F33D5E;
+
+.rotate {
+  animation: rotation 5s;
 }
-.secondContent h1{
-    line-height: 70px;
-    font-size: 70px;
-    font-family: 'Anton', sans-serif;
-    font-weight: 100;
+
+.linear {
+  animation-timing-function: linear;
 }
-.secondContent p{
-    font-size: 20px;
-    color: grey;
+
+.infinite {
+  animation-iteration-count: infinite;
 }
-.secondImg{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.second {
+  padding: 2px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.secondContent {
+  width: 480px;
+  font-size: 80px;
+}
+.anime2 {
+  color: #f33d5e;
+}
+.secondContent h1 {
+  line-height: 70px;
+  font-size: 70px;
+  font-family: "Anton", sans-serif;
+  font-weight: 100;
+}
+.secondContent p {
+  font-size: 20px;
+  color: grey;
+}
+.secondImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .img2 {
-    height:464px;
-    padding-right: 20px;
+  height: 464px;
+  padding-right: 20px;
 }
-@media screen and (max-width: 1036px){
-    .img1{
-        height: 50vw;
-    }
-    .firstContent h1{
-        font-size: 6vw;
-    }
-    .firstContent p{
-        font-size: 2vw;
-    }
+@media screen and (max-width: 1036px) {
+  .img1 {
+    height: 50vw;
+  }
+  .firstContent h1 {
+    font-size: 6vw;
+  }
+  .firstContent p {
+    font-size: 2vw;
+  }
 }
-@media screen and (max-width: 500px){
-    .first{
-        flex-direction: column;
-    }
-    .firstContent h1{
-        text-align: center;
-    }
-    .firstContent p{
-        text-align: center;
-    }
-    .firstContent{
-        width: 300px;
-        margin: auto;
-        margin-bottom: 50px;
-    }
-}
-
-@media screen and (max-width: 1036px){
-    .img2{
-        height: 50vw;
-    }
-    .secondContent h1{
-        font-size: 6vw;
-    }
-    .secondContent p{
-        font-size: 2vw;
-    }
-}
-@media screen and (max-width: 500px){
-    .second{
-        flex-direction: column-reverse;
-    }
-    .secondContent h1{
-        text-align: center;
-    }
-    .secondContent p{
-        text-align: center;
-    }
-    .secondContent{
-        width: 300px;
-        margin: auto;
-    }
-}
-@media screen and (max-width: 663px){
-    .img1, .img2{
-        height: 45vw;
-    }
-    .join{
-        top: 29%;
-        left: 40%;
-    }
+@media screen and (max-width: 500px) {
+  .first {
+    flex-direction: column;
+  }
+  .firstContent h1 {
+    text-align: center;
+  }
+  .firstContent p {
+    text-align: center;
+  }
+  .firstContent {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
 }
 
+@media screen and (max-width: 1036px) {
+  .img2 {
+    height: 50vw;
+  }
+  .secondContent h1 {
+    font-size: 6vw;
+  }
+  .secondContent p {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .second {
+    flex-direction: column-reverse;
+  }
+  .secondContent h1 {
+    text-align: center;
+  }
+  .secondContent p {
+    text-align: center;
+  }
+  .secondContent {
+    width: 300px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 663px) {
+  .img1,
+  .img2 {
+    height: 45vw;
+  }
+  .join {
+    top: 29%;
+    left: 40%;
+  }
+}

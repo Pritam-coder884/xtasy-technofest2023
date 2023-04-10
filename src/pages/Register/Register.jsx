@@ -1,7 +1,7 @@
 import React, {useState,useEffect } from "react";
 import {useNavigate,Link} from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
-import "../login/Login.css";
+import "../login/Login.scss";
 import { registerInitiate } from "../../Redux/action";
 import { ToastContainer } from "react-toastify";
 

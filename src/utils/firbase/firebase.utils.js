@@ -5,7 +5,7 @@ import {
   // signInWithRedirect,
   // signInWithPopup,
   // GoogleAuthProvider,
-  createUserWithEmailAndPassword,
+  createUserWithEmailAndPassword
   // signInWithEmailAndPassword,
   // signOut,
   // onAuthStateChanged,

@@ -8,6 +8,7 @@
     bottom: 45%;
     left: 45%;
     transition: all 0.2s;
+
 }
 .join:hover{
     transform: scale(1.2);
@@ -40,7 +41,7 @@
     justify-content: center;
 }
 .img1 {
-    height: 500px;
+    height:464px;
 }
 
 .second{
@@ -71,7 +72,7 @@
     justify-content: center;
 }
 .img2 {
-    height: 500px;
+    height:464px;
     padding-right: 20px;
 }
 @media screen and (max-width: 1036px){

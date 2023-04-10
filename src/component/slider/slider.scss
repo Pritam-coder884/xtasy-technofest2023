@@ -4,15 +4,7 @@
     box-sizing: border-box;
 }
 
-@keyframes slide{
-    0%{
-        transform:translateX(0)
-    }
-    100%{
-        transform: translateX(-100%);
-    }
-}
-.card{
+.container-slider{
    
     height: 100px;
     padding-top: 50;
@@ -23,11 +15,21 @@
 
 }
 .container{
-    animation: 15s slide infinite;
+    animation: 25s slide infinite;
     display: flex;
     width: calc(150px*9);
 }
-.card .card_slider{
+
+@keyframes slide{
+    0%{
+        transform:translateX(0)
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.container-slider .card_slider{
 white-space: nowrap;
 height:100px;
 width: 250px;

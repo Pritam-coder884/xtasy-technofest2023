@@ -1,10 +1,16 @@
 import React,{useState} from 'react'
+<<<<<<< HEAD
+import Modal from '../../component/modals/Modal';
+import {Link} from "react-router-dom";
+import Header_slider from '../../component/modals/slider/Header_slider';
+=======
 // import Modal from '../../component/modals/Modal';
 // import {Link} from "react-router-dom";
 import './LandingPage.scss'
 import img1 from "../../Assets/images/Group 7571.png"
 import img2 from "../../Assets/images/Group 7572.png"
 import img3 from "../../Assets/images/Frame 7.png"
+>>>>>>> b21059fa886043d2d871dc76c1b0ac8cfbae0c0e
 
 const LandingPage = () => {
 
@@ -31,7 +37,7 @@ const LandingPage = () => {
       <Modal handleClose={closeModalHandler} show={showModal} >
          <h2 children={modaldata}></h2>
       </Modal>
-
+     <Header_slider/>
       <button type="button" onClick={openModalHandler}>
           Open
       </button>

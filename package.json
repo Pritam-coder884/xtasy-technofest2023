@@ -16,6 +16,10 @@
     "redux": "^4.2.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.2",
+<<<<<<< HEAD
+    "saas": "^1.0.0",
+=======
+>>>>>>> b21059fa886043d2d871dc76c1b0ac8cfbae0c0e
     "sass": "^1.61.0",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"

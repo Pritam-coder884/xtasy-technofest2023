@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Modal from '../../component/modals/Modal';
 import {Link} from "react-router-dom";
+import Header_slider from '../../component/modals/slider/Header_slider';
 
 const LandingPage = () => {
   const [showModal,setShowModal]=useState(false);
@@ -21,7 +22,7 @@ const LandingPage = () => {
       <Modal handleClose={closeModalHandler} show={showModal} >
          <h2 children={modaldata}></h2>
       </Modal>
-
+     <Header_slider/>
       <button type="button" onClick={openModalHandler}>
           Open
       </button>

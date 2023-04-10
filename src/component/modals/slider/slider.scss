@@ -1,0 +1,38 @@
+*{
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+@keyframes slide{
+    0%{
+        transform:translateX(0)
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.card{
+   
+    height: 100px;
+    padding-top: 50;
+    margin: auto;
+    overflow: hidden;
+    position: inherit;
+    width: auto;
+
+}
+.container{
+    animation: 15s slide infinite;
+    display: flex;
+    width: calc(150px*9);
+}
+.card .card_slider{
+white-space: nowrap;
+height:100px;
+width: 250px;
+}
+.card_title{
+    height: 50px;
+    margin: 0 40px;
+}

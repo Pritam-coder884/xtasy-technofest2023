@@ -4,18 +4,16 @@ import "./slider.scss";
 
 function Slider() {
   return (
-    <div className="container">
+    <div className="container-slider">
+      <div className="card-slider">
       {Data_slider.map((item) => {
         return (
-          <div className="container-slider">
-            <div className="card_slider">
               <div className="card-title">
                 <h4>{item.title}</h4>
               </div>
-            </div>
-          </div>
         );
       })}
+      </div>
     </div>
   );
 }

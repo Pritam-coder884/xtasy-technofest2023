@@ -42,26 +42,37 @@ const LandingPage = () => {
       <div className="Content">
         <div className="first">
           <div className="firstContent">
-            <span>
+            <div>
               <h1>
                 Enter into the <span className="anime1">anime</span> verse
-              </h1>{" "}
-            </span>
+              </h1>
+            </div>
+            <div className="firstcontent__content">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
               expedita fugiat, eveniet minima maxime deserunt.
             </p>
+            </div>
           </div>
-          <div className="firstImg">
-            <img className="img1" src={img1} alt="" />
+          <div className="firstimage-container">
+            <div className="join-layer">
+              <img
+                className="layer-img rotate linear infinite"
+                src={layerImg}
+                alt=""
+              />
+              <div className="joinn">
+                <img className="join" src={img3} alt="" />
+              </div>
+            </div>
+
+            <div className="firstImg">
+              <img className="img1" src={img1} alt="" />
+            </div>
           </div>
         </div>
-       <div className="join-layer">
-        <img className="layer-img rotate linear infinite" src={layerImg} alt="" />
-        <div className="joinn">
-          <img className="join" src={img3} alt="" />
-        </div>
-       </div>
+
+        {/* 2nd slide */}
 
         <div className="second">
           <div className="secondImg">
@@ -69,6 +80,7 @@ const LandingPage = () => {
           </div>
           <div className="secondContent">
             <h1>Know the miracle</h1>
+            <div  className="firstcontent__content">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
               rem odio quos accusantium deserunt fugiat alias nam ipsam ea
@@ -76,6 +88,7 @@ const LandingPage = () => {
               culpa perferendis veritatis consequuntur saepe fuga soluta
               voluptate delectus dolorum. Quibusdam, perferendis neque.
             </p>
+            </div>
           </div>
         </div>
       </div>

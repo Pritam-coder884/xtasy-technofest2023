@@ -19,6 +19,8 @@
     background: #F5EBB5; 
 }
 .headText{
+    display: flex;
+    justify-content: center;
     background: #F5EBB5;
     font-size: 72px;
     padding: 0;
@@ -27,19 +29,7 @@
     padding: 0 1rem 0 1rem;
     display: flex;
     text-align: center;
-}
-.sponsorCard{
-    width: 175.84px;
-height: 123.33px;
-background: #335649;
-border-radius: 30px;
-display: flex;
-align-items: center;
-/* padding: px; */
-margin: 15px;
-display: flex;
-justify-content: center;
-align-items: center;
+    width: 70vw;
 }
 .slider{
     height:250px;
@@ -54,10 +44,6 @@ align-items: center;
     display: flex;
     width:calc( 195.84px*20);
     animation: scroll 20s linear infinite;
-}
-.cardImg{
-    height: 115px;
-    width:115px;
 }
 @keyframes scroll {
     0%{

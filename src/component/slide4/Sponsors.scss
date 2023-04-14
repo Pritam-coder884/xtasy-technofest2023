@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Roboto:wght@100&display=swap');
+.sponsors{
+    background-color: #1E1E1E;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+.headingSponsors{
+    display: flex;
+    justify-content: space-between;
+    background: #F5EBB5; 
+    color: #F5EBB5;
+    font-family: 'Anton', sans-serif;
+    
+}
+.colorBar{
+    width: 138px;
+    height: 57px;
+    background: #F5EBB5; 
+}
+.headText{
+    background: #F5EBB5;
+    font-size: 72px;
+    padding: 0;
+    margin: 0;
+    background-color: #1E1E1E;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    text-align: center;
+}
+.sponsorCard{
+    width: 175.84px;
+height: 123.33px;
+background: #335649;
+border-radius: 30px;
+display: flex;
+align-items: center;
+/* padding: px; */
+margin: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.slider{
+    height:250px;
+    margin:auto;
+    position: relative;
+    width:100vw;
+    display: grid;
+    place-items: center;
+
+}
+.slide-track{
+    display: flex;
+    width:calc( 195.84px*20);
+    animation: scroll 20s linear infinite;
+}
+.cardImg{
+    height: 115px;
+    width:115px;
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform:translateX(calc(-250px*5))
+    }
+}
+@media (max-width: 1200px){
+    .headText{
+        font-size: 50px;
+    }
+}
+@media (max-width: 960px){
+    .headText{
+        font-size: 40px;
+    }
+}
+@media (max-width:785px){
+    .headText{
+        text-align: center;
+    }
+}

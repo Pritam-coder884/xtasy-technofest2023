@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Roboto:wght@100&display=swap');
+.headingEvents{
+    color: #F5EBB5;
+    font-weight: 400;
+    font-size: 72px;
+    margin-bottom: 1rem;
+    font-family: 'Anton', sans-serif;
+    width:20vw;
+    /* line-height: 90px; */
+}
+.partOne{
+   width:35vw;
+   margin: 1rem;
+}
+
+.clockimg{
+    height:21vw;
+    padding-left: 40px ;
+}
+.content{
+    color: #7B8382;
+    font-size: 16px;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #1E1E1E;
+    padding:1rem 0rem 2rem 1rem;
+}
+// .partTwo{
+//     padding-right: 5px;
+// }
+.eventCards{
+    height: 262.5px;
+    width: 350px;
+    border-radius: 32px;
+    border: 12px solid #1F322B;
+    margin:1rem;
+    position: relative;
+    background: #3E6355;
+    cursor: pointer;
+}
+.cardText{
+    position: absolute;
+left: 28px;
+bottom: 10px;
+font-size: 40px;
+font-family: 'Anton', sans-serif;
+
+color: #FFFFFF;
+}
+.cardContainer{
+    display: flex;
+}
+@media (max-width: 1200px){
+    .eventCards{
+        width: 280px;
+        height: 207px;
+        margin:0.6rem;
+    }
+    .headingEvents{
+        font-size: 50px;
+    }
+    .cardText{
+        font-size: 28px;
+    }
+}
+@media (max-width: 960px){
+    .eventCards{
+        width: 220px;
+        height: 163px;
+        margin: 0.4rem;
+    }
+    .headingEvents{
+        font-size: 40px;
+    }
+    .cardText{
+        font-size: 23px;
+    }
+}
+@media (max-width:814px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .partOne{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .headingEvents{
+        text-align: center;
+        width:100%;
+    }
+    .content{
+        text-align: center;
+           }
+           .clock{
+            display: flex;
+            justify-content: center;
+        }
+        .clockimg{
+            height:300px;
+        }
+}
+@media (max-width:570px){
+    .cardContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .eventCards{
+        width: 280px;
+        height: 207px;
+    }
+    .cardText{
+        font-size: 28px;
+    }
+}

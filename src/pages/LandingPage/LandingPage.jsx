@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header_slider from "../../component/slider/Header_slider";
 // import Modal from '../../component/modals/Modal';
 // import {Link} from "react-router-dom";
 import "./LandingPage.scss";
@@ -8,6 +7,7 @@ import img2 from "../../Assets/images/Group 7572.png";
 import img3 from "../../Assets/images/Frame 7.png";
 import Navbar from "../../component/navbar/Navbar";
 import layerImg from "../../Assets/images/Layer_1.png";
+import Slider from "../../component/slider/Slider";
 
 const LandingPage = () => {
   // Modal Component implementation
@@ -79,7 +79,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      {/* <Header_slider /> */}
+       <Slider/>
     </div>
   );
 };

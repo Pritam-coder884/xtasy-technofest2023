@@ -1,7 +1,7 @@
 import "./regimg.scss"
-import circle from "../assets/images/circle.png"
-import proj from "../assets/images/projector.png"
-import light from "../assets/images/light.png"
+import circle from "../../Assets/images/circle.png"
+import proj from "../../Assets/images/projector.png"
+import light from "../../Assets/images/light.png"
 
 const RegImg=()=>{
     return(

@@ -8,13 +8,14 @@ import HomeTop from '../component/HomeTop/HomeTop'
 import Timeline from '../component/Timeline/Timeline'
 import Card from '../component/card_register/Card'
 import RegImage from '../component/register/RegImage';
+import Reg_OUTR from '../pages/SignUp/reg_outr';
 
 const Home = () => {
   return (
    <Routes>
     <Route path="/" element={<LandingPage/>} />
     <Route path="/login" element={<Login/>} />
-    <Route path="/register" element={<Register/>} />
+    <Route path="/register" element={<Reg_OUTR/>} />
   </Routes>
   )
 }

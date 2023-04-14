@@ -6,7 +6,7 @@ import light from '../../Assets/images/light.png'
 
 function RegImage(){
         return(
-            <div className="image">
+            <div className="images">
                 <div className="circle">
                  <img src={circle} alt="#" className="cir"/>
                 </div>

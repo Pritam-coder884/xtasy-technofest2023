@@ -6,9 +6,6 @@ import {Routes,Route} from "react-router-dom";
 
 const Home = () => {
   return (
-    // <div>
-    //     <LandingPage />
-    // </div>
    <Routes>
     <Route path="/" element={<LandingPage/>} />
     <Route path="/login" element={<Login/>} />

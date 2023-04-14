@@ -1,0 +1,64 @@
+.timeline{
+    background-image: url(../../Assets/images/timeline.png);
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.timeline h1{
+    color: rgba(46, 68, 60, 1);
+    text-align: center;
+    margin-top: 20px;
+}
+.wholeTimeline{
+    margin: 20px 0;
+}
+.days{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+}
+.day{
+    height: 300px;
+    width: 250px;
+    background-color: #3E6355;
+    border: 8px solid #1F322B;
+    border-radius: 15px;
+}
+.content1, .content2, .content3{
+    margin: auto;
+    text-align: center;
+}
+.btn{
+    background-color: #EA662F;
+    color: #FFFCEB;
+    margin-top: 15px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 2px solid #ee4700;
+    margin-bottom: 20px;
+}
+@media(max-width: 831px){
+    .days{
+       grid-template-columns: 6fr 6fr; 
+    }
+    .content3{
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+}
+@media(max-width: 602px){
+    .days{
+       grid-template-columns: 12fr; 
+    }
+    .content1{
+        grid-row: 1/2;
+        grid-column: 1/4;
+    }
+    .content2{
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+    .content3{
+        grid-row: 3/4;
+        grid-column: 1/4;
+    }
+}

@@ -3,6 +3,7 @@ import "./Navbar.scss";
 import { useState } from "react";
 import img from "../../Assets/images/navbutton.png";
 import logo from "../../Assets/images/logo.png"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [navBtn, setNavBtn] = useState(false);
@@ -24,7 +25,7 @@ const Navbar = () => {
           </div>
           <div className="navButton">
             <div className="textBtn">Sign In</div>
-            <div className="regButton">Register</div>
+            <Link to="/register"><div className="regButton">Register</div></Link>
           </div>
 
           <img
@@ -42,7 +43,7 @@ const Navbar = () => {
             <div className="navButton2 bottomBorder">timeline</div>
             <div className="navButton2 bottomBorder">highlights</div>
             <div className="navButton2 ">Sign In</div>
-            <div className="regButton2">Register</div>
+            <Link to="/register"><div className="regButton2">Register</div></Link>
           </div>
         </div>
       )}

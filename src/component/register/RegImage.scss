@@ -1,0 +1,37 @@
+.image{
+    display: flex;
+    position: relative;
+    .circle{
+        position: absolute;
+        z-index: 1;
+        top: 3rem;
+        left: 9rem;
+        .cir{
+            width: 15rem;
+            height:15rem
+        }
+    }
+    .proj{
+        position: relative;
+        z-index: 5;
+        top: 5rem;
+        left: 7rem;
+        transform: rotate(9deg);
+         .pj{
+             width: 15rem;
+            height:15rem
+     }
+    }
+    .light{
+        position: relative;
+        transform:rotate(16deg);
+         z-index: 4;
+        // background-color: red;
+        right:28rem;      
+        bottom: 15rem;
+        .lt{
+            width: 28rem;
+            height: 20rem;
+ }
+}
+}

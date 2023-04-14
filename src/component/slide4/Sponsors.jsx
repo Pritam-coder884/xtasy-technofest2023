@@ -4,7 +4,7 @@ import img1 from '../../Assets/images/appleLogo.jpg';
 import SponsorCard from './SponsorCard';
 
 const Sponsors = () => {
-
+  const image=[img1,img1,img1,img1,img1]
   return (
     <div className='sponsors'>
         <div className='headingSponsors'> 
@@ -14,29 +14,29 @@ const Sponsors = () => {
         </div>
         <div className='slider'>
             <div className='slide-track'>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
+            {
+              image.map((item)=>
+              <SponsorCard img={item}/>
+              )
+            }
             {/* // */}
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
+            {
+              image.map((item)=>
+              <SponsorCard img={item}/>
+              )
+            }
             {/* // */}
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
+            {
+              image.map((item)=>
+              <SponsorCard img={item}/>
+              )
+            }
             {/*  */}
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
-            <SponsorCard img={img1}/>
+            {
+              image.map((item)=>
+              <SponsorCard img={item}/>
+              )
+            }
             </div>
         </div>
     </div>

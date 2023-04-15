@@ -3,6 +3,7 @@ import "./Navbar.scss";
 import { useState } from "react";
 import img from "../../Assets/images/navbutton.png";
 import logo from "../../Assets/images/logo.png"
+import '../../fonts/Reuben Condensed.otf'
 
 const Navbar = () => {
   const [navBtn, setNavBtn] = useState(false);

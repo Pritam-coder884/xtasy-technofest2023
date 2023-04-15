@@ -1,5 +1,4 @@
 import React from 'react'
-// import Navbar from '../../component/navbar/Navbar'
 import Homepage from '../../component/slide4/Homepage'
 import HomeTop from '../../component/HomeTop/HomeTop'
 import Footer from '../../component/Footer/Footer'

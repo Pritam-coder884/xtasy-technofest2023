@@ -4,7 +4,6 @@ import { useState } from "react";
 import img from "../../Assets/images/navbutton.png";
 import logo from "../../Assets/images/logo.png"
 import { Link } from "react-router-dom";
-import '../../fonts/Reuben Condensed.otf'
 
 
 const Navbar = () => {

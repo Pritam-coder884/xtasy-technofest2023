@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Roboto:wght@100&display=swap');
+
 
 .NavAll{
 // background-color: inherit;
@@ -38,7 +37,7 @@ padding:3rem;
     display:flex;
     justify-content: space-between;
     width: 16rem;
-    font-family: 'Inter', sans-serif;
+    font-family: Reuben;
     font-weight: 500;
     align-items: center;
     color:#FFFFFF;
@@ -53,7 +52,7 @@ padding:3rem;
     color:#FFFFFF;
     width: 90%;
     border-radius:12px;
-    font-family: 'Inter', sans-serif;
+    font-family: Reuben;
 }
 .navButton{
     height:1rem;
@@ -61,14 +60,14 @@ padding:3rem;
 .navButton{
     display: flex;
     align-items: center;
-    font-family: 'Inter', sans-serif;
+    font-family: Reuben;
     justify-content: space-between;
     width:12rem;
     padding-right: 0.8rem;
     color: #FFFFFF;
 }
 .regButton{
-    font-family: "Reuben";
+    font-family: Reuben;
     color:#FFFFFF;
     padding: 0.5rem 1rem;
     gap: 8px;

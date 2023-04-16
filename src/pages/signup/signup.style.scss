@@ -1,15 +1,10 @@
-@font-face {
-    font-family: Reuben;
-    src: url("../../Assets/fonts/Reuben.otf") format('opentype');
-}
-
 .regpage{
     margin-top: -2rem;
     display: flex;
     height: 54rem;
     width: 100%;
     color: #F5EBB5;
-    font-family:"Reuben";
+    font-family: Reuben;
     .left_section{
         width: 60%;
         background: #1A2D26;
@@ -189,4 +184,3 @@
         }
     }
 }
-

@@ -21,7 +21,7 @@ const Navbar = () => {
           />
           </div>
           <div className="navContent1">
-            <div className="textBtn">events</div>
+            <Link to="/events"><div className="textBtn">events</div></Link>
             <div className="textBtn">timeline</div>
             <div className="textBtn">highlights</div>
           </div>

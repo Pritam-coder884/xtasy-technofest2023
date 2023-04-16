@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Roboto:wght@100&display=swap');
 .sponsors{
-    background-color: #1E1E1E;
+    background-color: rgba(46, 68, 60, 1);
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -19,27 +19,17 @@
     background: #F5EBB5; 
 }
 .headText{
+    display: flex;
+    justify-content: center;
     background: #F5EBB5;
     font-size: 72px;
     padding: 0;
     margin: 0;
-    background-color: #1E1E1E;
+    background-color: rgba(46, 68, 60, 1);
     padding: 0 1rem 0 1rem;
     display: flex;
     text-align: center;
-}
-.sponsorCard{
-    width: 175.84px;
-height: 123.33px;
-background: #335649;
-border-radius: 30px;
-display: flex;
-align-items: center;
-/* padding: px; */
-margin: 15px;
-display: flex;
-justify-content: center;
-align-items: center;
+    width: 70vw;
 }
 .slider{
     height:250px;
@@ -54,10 +44,6 @@ align-items: center;
     display: flex;
     width:calc( 195.84px*20);
     animation: scroll 20s linear infinite;
-}
-.cardImg{
-    height: 115px;
-    width:115px;
 }
 @keyframes scroll {
     0%{

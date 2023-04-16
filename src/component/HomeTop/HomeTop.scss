@@ -3,10 +3,13 @@
 
 .Content {
     background-color: rgba(46, 68, 60, 1);
+    // padding: 2rem 0;
 }
 
 .first {
-    padding: 2px 30px;
+    padding: 0 30px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -66,7 +69,9 @@ hr{
 
 
 .second {
-    padding: 2px 30px;
+    padding: 0 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     justify-content: space-around;
 }
@@ -122,6 +127,8 @@ hr{
 @media screen and (max-width: 500px) {
     .first {
         flex-direction: column;
+        margin-top: -40px;
+        margin-bottom: 20px;
     }
 
     .firstContent h1 {
@@ -131,6 +138,7 @@ hr{
 
     .firstContent p {
         text-align: center;
+        margin-bottom: 30px;
     }
 
     .firstContent {
@@ -158,6 +166,8 @@ hr{
 @media screen and (max-width: 500px) {
     .second {
         flex-direction: column-reverse;
+        margin-top: -20px;
+        margin-bottom: -20px;
     }
 
     .secondContent h1 {
@@ -167,10 +177,21 @@ hr{
 
     .secondContent p {
         text-align: center;
+        margin-bottom: 30px;
     }
 
     .secondContent {
         width: 300px;
         margin: auto;
+    }
+}
+@media(max-width: 656px){
+    .first{
+        padding-top: 70px;
+        padding-bottom: 10px;
+    }
+    .second{
+        padding-top: 30px;
+        padding-bottom: 60px;
     }
 }

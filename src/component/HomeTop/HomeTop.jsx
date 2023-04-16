@@ -8,8 +8,8 @@ import Navbar from "../navbar/Navbar";
 const HomeTop = () => {
   return (
    <>
-    <Navbar />
     <div className="Content">
+    <Navbar />
         <div className="first">
         <div className="firstContent">
           <div>

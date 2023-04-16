@@ -3,10 +3,10 @@ import "./Events.scss";
 import Navbar from "../../component/navbar/Navbar";
 import EventCards from "../../component/EventCards/EventCards";
 import Footer from "../../component/Footer/Footer";
-import '../../fonts/Reuben Condensed.otf'
 import {events} from '../../component/events'
 import { useState } from "react";
 import Modal from "../../component/modals/Modal";
+
 
 const Events = () => {
   const [show, setShow] = useState(false);

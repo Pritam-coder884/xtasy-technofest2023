@@ -22,13 +22,13 @@ const Homepage = () => {
         </div>
         <div className='partTwo'>
             <div className='cardContainer'>
-            <div className='eventCards' style={{backgroundImage:`url(${Img})`, backgroundSize:"cover"}}>
+            <div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
                     <div className='cardText'>
                         <div>Fun</div>
                         <div>Events</div>
                     </div>
                 </div>
-                <div className='eventCards' style={{backgroundImage:`url(${Img})`, backgroundSize:"cover"}}>
+                <div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
                 <div className='cardText'>
                         <div>Fun</div>
                         <div>Events</div>
@@ -36,13 +36,13 @@ const Homepage = () => {
                 </div>
             </div>
             <div className='cardContainer'>
-                <div className='eventCards' style={{backgroundImage:`url(${Img})`, backgroundSize:"cover"}}>
+                <div className='eventCards' style={{backgroundImage:`url())`, backgroundSize:"cover"}}>
                 <div className='cardText'>
                         <div>Fun</div>
                         <div>Events</div>
                     </div>
                 </div>
-                <div className='eventCards' style={{backgroundImage:`url(${Img})`, backgroundSize:"cover"}}>
+                <div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
                 <div className='cardText'>
                         <div>Fun</div>
                         <div>Events</div>

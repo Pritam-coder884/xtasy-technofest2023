@@ -79,6 +79,7 @@ padding:3rem;
     font-size: 1.2rem;
     cursor: pointer;
 }
+
 .navButton2{
     background-color: #040F0E;
     width: 100%;
@@ -99,6 +100,7 @@ padding:3rem;
     margin-bottom: 0.3rem;
 }
 .regButton2{
+    text-decoration: none;
     font-family: Reuben;
     letter-spacing: 1px;
     background: #EA662F;
@@ -119,8 +121,10 @@ padding:3rem;
     cursor: pointer;
 }
 .textBtn{
+    text-decoration: none;
     cursor: pointer;
     padding: 10px;
+     color:#FFFFFF;
 }
 .navButton2:hover{
     background-color:  #7B8382;
@@ -157,6 +161,9 @@ padding:3rem;
     .navContent1,.navButton{
         display: none;
     }  
+    .regButton{
+        font-size: 1rem;
+    }
     .Navbar{
         width: 100%;
         margin: 0;
@@ -175,4 +182,7 @@ padding:3rem;
     .navContent2{
         display: none;
     }
+}
+a{
+    text-decoration: none;
 }

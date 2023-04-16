@@ -1,0 +1,37 @@
+.eventContainer{
+    display: flex;
+    padding: 64px;
+    // width:1098px;
+    background-color:#1A2D26;
+}
+.eventImg{
+    width: 348px;
+    height: 348px;
+    background: #2E443C;
+    border-radius: 12px;
+}
+.RegisterBtn{
+    width: 400px;
+height: 65px;
+
+background: #EA662F;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.eventHeading{
+    color: #F5EBB5;
+    font-size: 64px;
+}
+.eventDetails{
+    padding-left: 2rem;
+    width:50vw;
+}
+.time,.detailLink{
+    display: flex;
+}
+.detailAns{
+    margin-left: 2rem;
+}

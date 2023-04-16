@@ -4,7 +4,7 @@ import img1 from '../../Assets/images/appleLogo.jpg';
 import SponsorCard from './SponsorCard';
 
 const Sponsors = () => {
-  const image=[img1,img1,img1,img1,img1]
+  const image=[null,null,null,null,null];
   return (
     <div className='sponsors'>
         <div className='headingSponsors'> 

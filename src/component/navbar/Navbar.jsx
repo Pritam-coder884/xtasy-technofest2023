@@ -44,7 +44,7 @@ const Navbar = () => {
             <div className="navButton2 bottomBorder">timeline</div>
             <div className="navButton2 bottomBorder">highlights</div>
             <div className="navButton2 ">Sign In</div>
-            <Link to="/register"><div className="regButton2">Register</div></Link>
+            <Link to="/register"  className="regButton2"><div>Register</div></Link>
           </div>
         </div>
       )}

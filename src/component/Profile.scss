@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Roboto:wght@100&display=swap');
+.profileContainer{
+    background: #1E1E1E;;
+}
+.profileCard{
+    display: flex;
+    justify-content: left;
+    padding: 3rem 5rem 1rem 5rem;
+}
+.profileImg{
+    background: #1A2D26;
+    border-radius: 12px;
+    width: 169px;
+    height: 169px;
+}
+.userName{
+    color: #F5EBB5;
+    font-size: 24px;
+    font-family: 'Anton', sans-serif;
+}
+.detailBox{
+    display: flex;
+    justify-content: left;
+    padding-top: 3rem;
+}
+.detail{
+    width:20rem;
+}
+.userDetail{
+    color: #FFFFFF;
+    padding-left: 5rem;
+
+}
+.detailHeading{
+    color: #537568;
+
+}
+.eventHeading{
+    color: #F5EBB5;
+    font-size: 24px;
+    font-family: 'Anton', sans-serif;
+    padding: 3rem 5rem 1rem 5rem;
+}
+@media (max-width: 1370px){
+    .detail{
+        width:15rem;
+    }
+}
+@media (max-width: 1135px){
+    .detail{
+        width:13rem;
+    }
+}
+@media (max-width:1040px){
+    .profileCard{
+        flex-direction: column;
+    }
+    .userDetail{
+        padding: 1rem 0 0 0;
+    }
+}
+@media (max-width:785px){
+    .detail{
+        width:10rem;
+    }
+    .xtasyid{
+        padding-left: 2.3rem;
+    }
+}
+@media (max-width:586px){
+    .detailBox{
+        flex-direction: column;
+        padding: 1rem 0 0 0;
+    }
+    .profile{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .profileImgContainer{
+        display: flex;
+        justify-content: center;
+    }
+    .userName{
+        text-align: center;
+    }
+    .xtasyid{
+        padding-left: 0;
+    }
+    .detail{
+        margin: 0.28rem;
+    }
+    .eventHeading{
+        text-align: center;
+    }
+}

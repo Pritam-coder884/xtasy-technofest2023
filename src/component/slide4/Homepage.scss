@@ -6,6 +6,7 @@
     margin-bottom: 1rem;
     width:20vw;
     line-height:90px; 
+    padding-left:7rem;
     font-family: Reuben;
 }
 .partOne{
@@ -19,7 +20,8 @@
 }
 .content{
     color: #7B8382;
-    font-size: 16px;
+    font-size: 20px;
+    padding-left: 7rem;
 }
 .container{
     display: flex;
@@ -75,10 +77,15 @@ line-height:40px;
     }
     .headingEvents{
         font-size: 40px;
+        padding-left: 0;
     }
     .cardText{
         font-size: 23px;
         line-height:25px;
+    }
+    .content{
+        padding-left: 0;
+        font-size: 2vw;
     }
 }
 @media (max-width:814px){

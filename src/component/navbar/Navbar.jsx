@@ -12,13 +12,13 @@ const Navbar = () => {
     <div className="NavAll">
       <div className="Navbar">
         <div className="Nav">
-          <div className="Logo">
+          <Link to="/" ><div className="Logo">
           <img
             src={logo}
             alt=""
             className="logo"
           />
-          </div>
+          </div></Link>
           <div className="navContent1">
             <Link to="/events"><div className="textBtn">events</div></Link>
             <div className="textBtn">timeline</div>
@@ -26,7 +26,7 @@ const Navbar = () => {
           </div>
           <div className="navButton">
             <div className="textBtn">Sign In</div>
-            <Link to="/register"><div className="regButton">Register</div></Link>
+            <Link to="/gauth"><div className="regButton">Register</div></Link>
           </div>
 
           <img
@@ -44,7 +44,7 @@ const Navbar = () => {
             <div className="navButton2 bottomBorder">timeline</div>
             <div className="navButton2 bottomBorder">highlights</div>
             <div className="navButton2 ">Sign In</div>
-            <Link to="/register"  className="regButton2"><div>Register</div></Link>
+            <Link to="/gauth"  className="regButton2"><div>Register</div></Link>
           </div>
         </div>
       )}

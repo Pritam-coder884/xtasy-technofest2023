@@ -1,15 +1,16 @@
 import { initializeApp } from "firebase/app";
+import {getAuth,GoogleAuthProvider} from "firebase/auth"
 
-import {
-  getAuth,
-  // signInWithRedirect,
-  // signInWithPopup,
-  // GoogleAuthProvider,
-  createUserWithEmailAndPassword
-  // signInWithEmailAndPassword,
-  // signOut,
-  // onAuthStateChanged,
-} from "firebase/auth";
+// import {
+//   getAuth,
+//   signInWithRedirect,
+//   signInWithPopup,
+//   GoogleAuthProvider,
+//   createUserWithEmailAndPassword
+//   signInWithEmailAndPassword,
+//   signOut,
+//   onAuthStateChanged,
+// } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCQ-Upb9k9nGAmKhjjK-wydAzzfshzwLsM",
@@ -21,16 +22,10 @@ const firebaseConfig = {
   measurementId: "G-CSVNMQ77J4"
 };
 
-
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-export const auth = getAuth();
-
-
-export const createAuthUserWithEmailAndPassword = async (email, password) => {
-  if (!email || !password) return;
-
-  return await createUserWithEmailAndPassword(auth, email, password);
-};
+const auth = getAuth(app)
+const provider = new GoogleAuthProvider();
+export {auth,provider};
 
 

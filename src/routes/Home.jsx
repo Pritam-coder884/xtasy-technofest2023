@@ -5,6 +5,7 @@ import LandingPage from '../pages/LandingPage/LandingPage';
 import Signup from '../pages/signup/Signup';
 import Events from '../pages/Events/Events';
 import {Routes,Route} from "react-router-dom";
+import Gauth from '../pages/google_signup/Gauth';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
     <Route path="/" element={<LandingPage/>} />
     <Route path="/register" element={<Signup/>} />
     <Route path="/events" element={<Events/>} />
+    <Route path="/gauth" element={<Gauth />} />
   </Routes>
  
   )

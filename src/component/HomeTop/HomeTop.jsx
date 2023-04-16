@@ -3,10 +3,11 @@ import "./HomeTop.scss";
 import camera from '../../Assets/images/camera.png'
 import xtasy from '../../Assets/images/xtasy.png'
 import radio from '../../Assets/images/radio.png'
-import Navbar from '../navbar/Navbar'
+import Navbar from "../navbar/Navbar";
 
 const HomeTop = () => {
   return (
+   <>
     <div className="Content">
     <Navbar />
         <div className="first">
@@ -57,6 +58,7 @@ const HomeTop = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

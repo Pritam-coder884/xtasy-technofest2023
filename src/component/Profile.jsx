@@ -3,6 +3,7 @@ import "./Profile.scss"
 
 const Profile = () => {
   return (
+    <div className='profileContainer'>
     <div  className='profile'>
         <div className="profileCard">
             <div className='profileImgContainer'>
@@ -33,6 +34,11 @@ const Profile = () => {
             </div>
         </div>
     </div>
+      <div className='regEvents'>
+      <div className='eventHeading'>REGISTERED EVENTS</div>
+
+  </div>
+  </div>
   )
 }
 

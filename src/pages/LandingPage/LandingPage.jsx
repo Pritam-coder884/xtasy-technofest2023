@@ -1,22 +1,20 @@
 import React from 'react'
-// import Navbar from '../../component/navbar/Navbar'
 import Homepage from '../../component/slide4/Homepage'
-import HomeTop from '../../component/HomeTop/HomeTop'
-import Footer from '../../component/Footer/Footer'
-import Timeline from '../../component/Timeline/Timeline'
-import Profile from '../../component/Profile'
-import Eventdetails from '../../component/Eventdetails'
+import HomeTop from "../../component/HomeTop/HomeTop";
+import TimeLine from "../../component/Timeline/Timeline";
+import Footer from "../../component/Footer/Footer";
+import Profile from '../../component/Profile';
 
 const LandingPage = () => {
   return (
     <div>
-      <Eventdetails/>
-      <Profile/>
-      <HomeTop/>
-      <Timeline/>
+     
+      <HomeTop />
+      <TimeLine />
       <Homepage/>
-      <Footer/>
-      </div>
+      <Footer />
+      <Profile/>
+    </div>
   )
 }
 

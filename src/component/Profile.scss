@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Roboto:wght@100&display=swap');
-.profile{
+.profileContainer{
     background: #1E1E1E;;
 }
 .profileCard{
@@ -35,6 +35,12 @@
 .detailHeading{
     color: #537568;
 
+}
+.eventHeading{
+    color: #F5EBB5;
+    font-size: 24px;
+    font-family: 'Anton', sans-serif;
+    padding: 3rem 5rem 1rem 5rem;
 }
 @media (max-width: 1370px){
     .detail{
@@ -84,5 +90,8 @@
     }
     .detail{
         margin: 0.28rem;
+    }
+    .eventHeading{
+        text-align: center;
     }
 }

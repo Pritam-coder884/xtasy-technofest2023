@@ -2,12 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Roboto:wght@100&display=swap');
 
 .NavAll{
-background-color: inherit;
+// background-color: inherit;
+background-color: rgba(46, 68, 60, 1);
+// display: flex;
+// justify-content: center;
+padding:3rem;
+
 }
 .Navbar{
+    // margin: 3rem;
     display:flex;
     justify-content: center;
     align-items: center;
+    // margin-bottom: 0.5rem;
 }
 .Logo{
     width:12rem;
@@ -61,14 +68,11 @@ background-color: inherit;
     color: #FFFFFF;
 }
 .regButton{
-    font-family: 'Anton', sans-serif;
+    font-family: "Reuben";
     color:#FFFFFF;
     padding: 0.5rem 1rem;
     gap: 8px;
-    // width: 5rem;
-    // height: 1.6rem;
     background: #EA662F;
-
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -76,6 +80,7 @@ background-color: inherit;
     font-size: 1.2rem;
     cursor: pointer;
 }
+
 .navButton2{
     background-color: #040F0E;
     width: 100%;
@@ -96,6 +101,9 @@ background-color: inherit;
     margin-bottom: 0.3rem;
 }
 .regButton2{
+    text-decoration: none;
+    font-family: Reuben;
+    letter-spacing: 1px;
     background: #EA662F;
     font-family: 'Anton', sans-serif;
     color:#FFFFFF;
@@ -114,19 +122,21 @@ background-color: inherit;
     cursor: pointer;
 }
 .textBtn{
+    text-decoration: none;
     cursor: pointer;
     padding: 10px;
+     color:#FFFFFF;
 }
 .navButton2:hover{
     background-color:  #7B8382;
-    color:#F5EBB5;
+    color:#EA662F;
 }
 .regButton2:hover,.regButton:hover{
-    background-color: #7B8382;
+    background-color: #FFFCEB;
     color: #1E1E1E;
 }
 .textBtn:hover{
-    color: #F5EBB5;
+    color: #EA662F;
 }
 @media (max-width: 840px){
     .Logo{
@@ -152,6 +162,9 @@ background-color: inherit;
     .navContent1,.navButton{
         display: none;
     }  
+    .regButton{
+        font-size: 1rem;
+    }
     .Navbar{
         width: 100%;
         margin: 0;
@@ -170,4 +183,7 @@ background-color: inherit;
     .navContent2{
         display: none;
     }
+}
+a{
+    text-decoration: none;
 }

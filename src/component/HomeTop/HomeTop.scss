@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
+
 .Content {
     background-color: rgba(46, 68, 60, 1);
-    padding: 2rem 0;
+    // padding: 2rem 0;
 }
 
 .first {
@@ -11,6 +12,7 @@
     padding-bottom: 50px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .firstContent {

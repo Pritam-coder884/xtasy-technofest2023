@@ -3,7 +3,7 @@ import "./Events.scss";
 import Navbar from "../../component/navbar/Navbar";
 import EventCards from "../../component/EventCards/EventCards";
 import Footer from "../../component/Footer/Footer";
-import '../../fonts/Reuben Condensed.otf'
+import '../../Assets/fonts/Reuben Condensed.otf';
 
 const Events = () => {
   return (

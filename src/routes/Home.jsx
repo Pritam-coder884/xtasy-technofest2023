@@ -16,6 +16,10 @@ const Home = () => {
     <Route path="/events" element={<Events/>} />
     <Route path="/gauth" element={<Gauth />} />
     <Route path="/profile" element={<Profile/>}/>
+    <Route path="/funEvents" element={<Events text='FUN EVENTS'/>} />
+    <Route path="/cultEvents" element={<Events text='CULTURAL EVENTS'/>} />
+    <Route path="/techEvents" element={<Events text='TECHNICAL EVENTS'/>} />
+    <Route path="/workshops" element={<Events text='WORKSHOPS'/>} />
   </Routes>
  
   )

@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Roboto:wght@100&display=swap');
 .profileContainer{
-    background: #1E1E1E;;
+    background-color: rgb(46, 68, 60);
+    padding: 3rem 3rem 2rem 3rem;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .profileCard{
     display: flex;
     justify-content: left;
-    padding: 3rem 5rem 1rem 5rem;
+    padding: 0rem 0rem 2rem;
+    width: 90%;
 }
 .profileImg{
     background: #1A2D26;
@@ -17,7 +25,7 @@
 .userName{
     color: #F5EBB5;
     font-size: 24px;
-    font-family: 'Anton', sans-serif;
+    font-family: Reuben;
 }
 .detailBox{
     display: flex;
@@ -39,8 +47,10 @@
 .eventHeading{
     color: #F5EBB5;
     font-size: 24px;
-    font-family: 'Anton', sans-serif;
-    padding: 3rem 5rem 1rem 5rem;
+    font-family: Reuben;
+    padding: 3rem 0rem 1rem;
+    width: 90%;
+    margin: auto;
 }
 @media (max-width: 1370px){
     .detail{
@@ -71,6 +81,7 @@
 @media (max-width:586px){
     .detailBox{
         flex-direction: column;
+        align-items: center;
         padding: 1rem 0 0 0;
     }
     .profile{

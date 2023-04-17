@@ -3,11 +3,13 @@ import "./signup.style.scss";
 import FormInput from "../../component/Form/FormInput";
 import RegImg from "../../component/ImgReg/ImgReg";
 import { toast, ToastContainer } from "react-toastify";
-// import {UpdateUserDetails} from "../../utils/api/api.utils";
+import {useNavigate} from "react-router-dom"
 import { useSelector } from "react-redux";
 import axios from "axios";
 
 const Signup = () => {
+ const nav=useNavigate();
+
   const [userRegister, setUserRegister] = useState({
     name: "",
     email: "",
@@ -28,7 +30,6 @@ const Signup = () => {
       toast.error("Please give correct whatsApp number");
       return;
     }
-    // UpdateUserDetails({userRegister,accessToken})
     // console.log(userRegister);
     try {
       const response = await axios.post(
@@ -40,7 +41,8 @@ const Signup = () => {
           }
         },
       );
-      toast.success("registered successfully");
+      console.log("registered successfully");
+      nav("/");
     } catch (err) {
       throw new Error(err.message);
     }

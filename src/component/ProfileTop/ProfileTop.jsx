@@ -1,7 +1,47 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import "./ProfileTop.scss"
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 const ProfileTop = () => {
+    
+ const [name,setName]=useState("");
+ const [email,setEmail]=useState("");
+ const [phoneno,setPhoneno]=useState("");
+ const [regdno,setRegdno]=useState("");
+ const [xtasyid,setXtasyid]=useState("");
+ 
+
+ const {accessToken} = useSelector((state)=>state.custom)
+
+ const handleGetData=async()=>{
+    try {
+        const response = await axios.get(
+          "http://localhost:4000/api/user/details",
+          {
+            headers : {
+                Authorization : `Bearer ${accessToken}`
+            }
+          },
+        );
+        console.log(response.data.message);
+        const getData=response.data.data;
+        // console.log(getData);
+        setName(getData.name);
+        setEmail(getData.firebaseUid);
+        setPhoneno(getData.phoneNumber);
+        setRegdno(getData.registrationNumber);
+        
+        console.log(getData._id);
+
+      } catch (err) {
+        throw new Error(err.message);
+      }
+ }
+ useEffect(()=>{
+    handleGetData();
+ },[]);
+
   return (
     <div className='profileContainer'>
     <div  className='profile'>
@@ -12,19 +52,19 @@ const ProfileTop = () => {
             </div>
             <div className='userDetail'>
                 <div className='userName'>
-                    NAME COMES HERE
+                   {name}
                 </div>
                 <div className='userEmailId'>
-                    emailid@mail.com
+                    {email}
                 </div>
                 <div className='detailBox'>
                     <div className='detail'>
                         <div className='detailHeading'>phone number</div>
-                        <div>1234567890</div>
+                        <div>{phoneno}</div>
                     </div>
                     <div className='detail'>
                         <div className='detailHeading'>registration number</div>
-                        <div>1234567890</div>
+                        <div>{regdno}</div>
                     </div>
                     <div className='detail'>
                         <div className='detailHeading xtasyid'>xtasy id</div>

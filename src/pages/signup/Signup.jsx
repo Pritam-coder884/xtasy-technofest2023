@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, {useState} from "react";
 import "./signup.style.scss";
 import FormInput from "../../component/Form/FormInput";
 import RegImg from "../../component/ImgReg/ImgReg";
@@ -16,11 +16,9 @@ const Signup = () => {
     registrationNumber: "",
   });
   const {accessToken} = useSelector((state)=>state.custom)
-  useEffect(()=>{
-    console.log(accessToken)
-  },[accessToken]);
+
+
   const handleRegisterSubmit = async (e) => {
-    console.log(accessToken)
     e.preventDefault();
     if (userRegister.phoneNumber.length !== 10) {
       toast.error("Please put 10 digit mobile number");
@@ -33,17 +31,16 @@ const Signup = () => {
     // UpdateUserDetails({userRegister,accessToken})
     // console.log(userRegister);
     try {
-      console.log(accessToken)
       const response = await axios.post(
         "http://localhost:4000/api/user/updateDetails",
+        userRegister,
         {
           headers : {
               Authorization : `Bearer ${accessToken}`
           }
-        }
+        },
       );
-    // console.log(userRegister);
-      return response.data.data;
+      toast.success("registered successfully");
     } catch (err) {
       throw new Error(err.message);
     }

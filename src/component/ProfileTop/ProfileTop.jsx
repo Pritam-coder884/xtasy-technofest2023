@@ -24,7 +24,6 @@ const ProfileTop = () => {
             }
           },
         );
-        console.log(response.data.message);
         const getData=response.data.data;
         // console.log(getData);
         setName(getData.name);
@@ -32,7 +31,8 @@ const ProfileTop = () => {
         setPhoneno(getData.phoneNumber);
         setRegdno(getData.registrationNumber);
         
-        console.log(getData._id);
+        const getId=getData._id.substring(getData._id.length-7)
+        setXtasyid(getId);
 
       } catch (err) {
         throw new Error(err.message);
@@ -68,7 +68,7 @@ const ProfileTop = () => {
                     </div>
                     <div className='detail'>
                         <div className='detailHeading xtasyid'>xtasy id</div>
-                        <div className='xtasyid'>3243fssd</div>
+                        <div className='xtasyid'>x{xtasyid}</div>
                     </div>
                 </div>
             </div>

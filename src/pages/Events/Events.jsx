@@ -37,9 +37,9 @@ const Events = () => {
           </p>
         </div>
         <div className="buttons">
-          <button>DAY-1</button>
-          <button>DAY-2</button>
-          <button>DAY-3</button>
+          <button className="event-button">DAY-1</button>
+          <button className="event-button">DAY-2</button>
+          <button className="event-button">DAY-3</button>
         </div>
       </div>
       <div className="event-cards">

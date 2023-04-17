@@ -9,14 +9,27 @@
 }
 
 .modal-main {
-  position: fixed;
-  background: white;
-  width: 80%;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: #3E6355;
+  border: 8px solid #1F322B;
+  border-radius: 15px;
+  color: #F5EBB5;
+  padding: 10px;
+  .modal-content{
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+  }
+  ul{
+    list-style: none;
+    color: #F5EBB5;
+    text-decoration: none;
+    padding: 0;
+    li{
+      padding-top: 1rem;
+    }
+  }
 }
+
 
 .display-block {
   display: block;

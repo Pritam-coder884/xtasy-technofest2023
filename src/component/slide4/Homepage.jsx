@@ -8,7 +8,7 @@ const Homepage = () => {
     <>
       <div className="container">
         <div className="partOne">
-          <div className="headingEvents">EXCITNG EVENTS FOR YOU</div>
+          <div className="headingEvents">EXCITING EVENTS FOR YOU</div>
           <div className="content">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
             tenetur ipsa est. Sit, debitis consequatur.

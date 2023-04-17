@@ -21,7 +21,23 @@
 .buttons{
     margin-top: -20px;
 }
+
 button{
+    font-family: "Reuben";
+    letter-spacing: 1px;
+    margin: 0 5px;
+    border-radius: 5px;
+    height: 40px;
+    width: 80px;
+    color: #F5EBB5;
+    background-color: #EA662F;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px; 
+}
+
+.event-button{
     font-family: "Reuben";
     letter-spacing: 1px;
     margin: 0 5px;
@@ -35,7 +51,7 @@ button{
     font-weight: bold;
     margin-bottom: 30px;
 }
-button:hover{
+.event-button:hover{
     background-color: #FFFCEB;
     color: #000000;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
-import "./Profile.scss"
+import "./ProfileTop.scss"
 
-const Profile = () => {
+const ProfileTop = () => {
   return (
     <div className='profileContainer'>
     <div  className='profile'>
@@ -42,4 +42,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default ProfileTop

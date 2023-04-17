@@ -22,7 +22,8 @@ const Navbar = () => {
           <div className="navContent1">
             <Link to="/events"><div className="textBtn">events</div></Link>
             <div className="textBtn">timeline</div>
-            <div className="textBtn">highlights</div>
+            {/* <div className="textBtn">highlights</div> */}
+            <Link to="/profile"><div className="textBtn">profile</div></Link>
           </div>
           <div className="navButton">
             <div className="textBtn">Sign In</div>

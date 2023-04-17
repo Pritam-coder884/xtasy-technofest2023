@@ -40,7 +40,7 @@ const Gauth = () => {
         </div>
       </div>
       <div className="right_section">
-         <div className="r_head">
+        <div className="r_head">
             <h2>REGISTER FOR THE EXCITING <span style={{color:"#EA662F"}}>RETRO</span> VERSE</h2>
             <div className="r_head_bottom">
                 <p style={{color:"gray"}}>Something really awesome is waiting for you register now to get the updates</p>
@@ -49,7 +49,10 @@ const Gauth = () => {
         {value ? (
           <Logout />
         ) : (
+          <div className="bt_container">
           <button className="submitbtn" onClick={handleClick}>Signup With Google</button>
+          </div>
+
         )}
       </div>
     </div>

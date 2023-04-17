@@ -96,9 +96,11 @@ const Signup = () => {
               value={userRegister.reg_number}
               onChange={handleRegisterChange}
             />
-            <button className="submitbtn" type="submit">
+            <div className="bt_container">  
+              <button className="submitbtn " type="submit">
               Register
             </button>
+            </div>
           </form>
         </div>
       </div>

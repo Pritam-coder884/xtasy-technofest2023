@@ -45,14 +45,17 @@
             font-size: 36px;
             text-align: center;
         }
-        .submitbtn{
-            width: 24.5rem;
-            height: 3rem;
-            background-color: #EA662F;
-            font-size: 20px;
-            color: white;
-            border: none;
-            border-radius: 10px;
+        .bt_container{
+            padding-top: 2rem;
+            .submitbtn{
+                width: 24.5rem;
+                height: 3rem;
+                background-color: #EA662F;
+                font-size: 20px;
+                color: white;
+                border: none;
+                border-radius: 10px;
+            }
         }
     }
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 import "../signup/signup.style.scss"
+import { Link } from 'react-router-dom'
+
 
 const Logout = () => {
     const logout =()=>{
@@ -8,8 +10,9 @@ const Logout = () => {
     }
     return (
         <div>
-            <h1>Home Page</h1>
-            <button className='submitbtn' onClick={logout}>Logout</button>
+            <Link to="/"><h1>Home Page</h1></Link>
+            <button className="submitbtn" onClick={logout}>Logout</button>
+
         </div>
     );
 }

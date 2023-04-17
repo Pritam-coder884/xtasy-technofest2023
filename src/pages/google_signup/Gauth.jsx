@@ -1,27 +1,44 @@
 import React, { useEffect, useState } from "react";
-import { auth, provider } from "../../utils/firbase/firebase.utils";
-import { signInWithPopup } from "firebase/auth";
 import Logout from "./Logout";
 import RegImg from "../../component/ImgReg/ImgReg";
 import "../signup/signup.style.scss";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { toast, ToastContainer } from "react-toastify";
+import { SignInWithGooglePopup } from "../../utils/firbase/firebase.utils";
 
 const Gauth = () => {
-    const nav=useNavigate();
+  const dispatch = useDispatch();
+  const { accessToken } = useSelector((state) => state.custom);
+
+  const nav = useNavigate();
+
   const [value, setValue] = useState("");
-  const handleClick = () => {
-    signInWithPopup(auth, provider).then((data) => {
-      setValue(data.user.email);
-      localStorage.setItem("email", data.user.email);
-      nav("/register");
-    });
+  const handleClick = async () => {
+    try {
+      await SignInWithGooglePopup();
+      return toast.success("Successfully signed in", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } catch (error) {
+      return toast.error("There was an error while Signing in !!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
   };
-
-  useEffect(() => {
-    setValue(localStorage.getItem("email"));
-    console.log(value);
-
-  });
 
   return (
     <div className="regpage">
@@ -41,20 +58,29 @@ const Gauth = () => {
       </div>
       <div className="right_section">
         <div className="r_head">
-            <h2>REGISTER FOR THE EXCITING <span style={{color:"#EA662F"}}>RETRO</span> VERSE</h2>
-            <div className="r_head_bottom">
-                <p style={{color:"gray"}}>Something really awesome is waiting for you register now to get the updates</p>
-            </div>
+
+          <h2>
+            REGISTER FOR THE EXCITING{" "}
+            <span style={{ color: "#EA662F" }}>RETRO</span> VERSE
+          </h2>
+          <div className="r_head_bottom">
+            <p style={{ color: "gray" }}>
+              Something really awesome is waiting for you register now to get
+              the updates
+            </p>
+
           </div>
+        </div>
         {value ? (
           <Logout />
         ) : (
           <div className="bt_container">
-          <button className="submitbtn" onClick={handleClick}>Signup With Google</button>
+          <button className="submitbtn" onClick={handleClick}>SignIN With Google</button>
           </div>
 
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 };

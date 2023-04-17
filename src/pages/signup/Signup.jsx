@@ -1,32 +1,55 @@
-import React, { useState} from "react";
+import React, { useEffect, useState} from "react";
 import "./signup.style.scss";
 // import "./reg.style.scss";
 import FormInput from "../../component/Form/FormInput";
 import RegImg from "../../component/ImgReg/ImgReg";
 import { toast, ToastContainer } from "react-toastify";
+// import {UpdateUserDetails} from "../../utils/api/api.utils";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 const Signup = () => {
   const [userRegister, setUserRegister] = useState({
     name: "",
     email: "",
-    phone: "",
-    wpnumber: "",
-    reg_number: "",
+    phoneNumber: "",
+    whatsappNumber: "",
+    registrationNumber: "",
   });
-
-  
-  const handleRegisterSubmit = (e) => {
+  const {accessToken} = useSelector((state)=>state.custom)
+  useEffect(()=>{
+    console.log(accessToken)
+  },[accessToken]);
+  const handleRegisterSubmit = async (e) => {
+    console.log(accessToken)
     e.preventDefault();
-    if (userRegister.phone.length !== 10) {
+    if (userRegister.phoneNumber.length !== 10) {
       toast.error("Please put 10 digit mobile number");
       return;
     }
-    if (userRegister.wpnumber.length !== 10) {
+    if (userRegister.whatsappNumber.length !== 10) {
       toast.error("Please give correct whatsApp number");
       return;
     }
-    
-    console.log(userRegister);
+    // UpdateUserDetails({userRegister,accessToken})
+    // console.log(userRegister);
+    try {
+      console.log(accessToken)
+      const response = await axios.post(
+        "http://localhost:4000/api/user/updateDetails",
+        {
+          headers : {
+              Authorization : `Bearer ${accessToken}`
+          }
+        }
+      );
+    // console.log(userRegister);
+      return response.data.data;
+    } catch (err) {
+      throw new Error(err.message);
+    }
+
+
   };
   
   const handleRegisterChange = (e) => {
@@ -76,24 +99,24 @@ const Signup = () => {
               placeholder="Phone Number"
               type="text"
               required
-              name="phone"
-              value={userRegister.phone}
+              name="phoneNumber"
+              value={userRegister.phoneNumber}
               onChange={handleRegisterChange}
             />
             <FormInput
               placeholder="Whatsapp Number"
               type="text"
               required
-              name="wpnumber"
-              value={userRegister.wpnumber}
+              name="whatsappNumber"
+              value={userRegister.whatsappNumber}
               onChange={handleRegisterChange}
             />
             <FormInput
               placeholder="Registration Number"
               type="text"
               required
-              name="reg_number"
-              value={userRegister.reg_number}
+              name="registrationNumber"
+              value={userRegister.registrationNumber}
               onChange={handleRegisterChange}
             />
             <div className="bt_container">  

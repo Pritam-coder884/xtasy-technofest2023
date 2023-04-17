@@ -3,10 +3,11 @@ import "./Homepage.scss";
 import clockImg from "../../Assets/images/clock.png";
 import Img from "../../Assets/images/demo.png";
 import Sponsors from "./Sponsors";
+import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <>
-      <div className="container">
+      <div className="container" id="events">
         <div className="partOne">
           <div className="headingEvents">EXCITING EVENTS FOR YOU</div>
           <div className="content">
@@ -19,44 +20,35 @@ const Homepage = () => {
         </div>
         <div className="partTwo">
           <div className="cardContainer">
-            <div
-              className="eventCards"
-              style={{ backgroundImage: `url()`, backgroundSize: "cover" }}
-            >
-              <div className="cardText">
-                <div>Fun</div>
-                <div>Events</div>
-              </div>
-            </div>
-            <div
-              className="eventCards"
-              style={{ backgroundImage: `url()`, backgroundSize: "cover" }}
-            >
-              <div className="cardText">
-                <div>Fun</div>
-                <div>Events</div>
-              </div>
-            </div>
+          <Link to="/funEvents" ><div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
+                    <div className='cardText'>
+                        <div>Fun</div>
+                        <div>Events</div>
+                    </div>
+                </div>
+                </Link>
+                <Link to="/cultEvents" ><div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
+                    <div className='cardText'>
+                        <div>Cultural</div>
+                        <div>Events</div>
+                    </div>
+                </div>
+                </Link>
           </div>
           <div className="cardContainer">
-            <div
-              className="eventCards"
-              style={{ backgroundImage: `url())`, backgroundSize: "cover" }}
-            >
-              <div className="cardText">
-                <div>Fun</div>
-                <div>Events</div>
-              </div>
-            </div>
-            <div
-              className="eventCards"
-              style={{ backgroundImage: `url()`, backgroundSize: "cover" }}
-            >
-              <div className="cardText">
-                <div>Fun</div>
-                <div>Events</div>
-              </div>
-            </div>
+          <Link to="/techEvents" ><div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
+                    <div className='cardText'>
+                        <div>Technical</div>
+                        <div>Events</div>
+                    </div>
+                </div>
+                </Link>
+                <Link to="/workshops" ><div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
+                    <div className='cardText'>
+                        <div>Workshops</div>
+                    </div>
+                </div>
+                </Link>
           </div>
         </div>
       </div>

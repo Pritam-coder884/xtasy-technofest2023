@@ -19,7 +19,7 @@ const Timeline = () => {
     setShow(false)
   }
   return (
-    <div>
+    <div id="timeline">
       <Modal show={show} handleClose={handleClose} handleOutsideClick={handleOutsideClick} size={true} events={Object.values(eventTimeline)[variable]}>
 
         </Modal>

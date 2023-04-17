@@ -6,9 +6,11 @@ import Footer from "../../component/Footer/Footer";
 import {events} from '../../component/events'
 import { useState } from "react";
 import Modal from "../../component/modals/Modal";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 
-const Events = () => {
+const Events = (props) => {
   const [show, setShow] = useState(false);
   const [modalId, setModalId] = useState(null);
   const [modalDescription , setModalDescription] = useState("");
@@ -23,6 +25,10 @@ const Events = () => {
   const handleOutsideClick = () => {
     setShow(false)
   }
+  const { pathname } = useLocation();
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[pathname])
   return (
     <>
       <Modal key={modalId} show={show} handleClose={handleClose} handleOutsideClick={handleOutsideClick} >{modalDescription}</Modal>
@@ -33,7 +39,7 @@ const Events = () => {
         </div>
         <div className="head-part">
           <p className="heading">
-            CHECK OUT FOR <span className="fun-part">FUN EVENTS</span>
+            CHECK OUT FOR <span className="fun-part">{props.text}</span>
           </p>
         </div>
         <div className="buttons">

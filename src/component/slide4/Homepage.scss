@@ -42,6 +42,10 @@
     position: relative;
     background: #3E6355;
     cursor: pointer;
+    transition: all 0.2s;
+}
+.eventCards:hover{
+    border-color:#F5EBB5 ;
 }
 .cardText{
     position: absolute;
@@ -55,7 +59,7 @@ line-height:40px;
 .cardContainer{
     display: flex;
 }
-@media (max-width: 1200px){
+@media (max-width: 1250px){
     .eventCards{
         width: 280px;
         height: 207px;
@@ -70,7 +74,7 @@ line-height:40px;
         line-height:30px;
     }
 }
-@media (max-width: 960px){
+@media (max-width: 1080px){
     .eventCards{
         width: 220px;
         height: 163px;

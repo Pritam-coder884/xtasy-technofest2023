@@ -1,22 +1,23 @@
 
+a{
+    text-decoration: none;
+}
 
 .NavAll{
-// background-color: inherit;
+
 background-color: rgba(46, 68, 60, 1);
-// display: flex;
-// justify-content: center;
-padding : 3rem;
+
+padding:3rem;
 
 }
 .Navbar{
-    // margin: 3rem;
+  
     display:flex;
     justify-content: center;
     align-items: center;
-    // margin-bottom: 0.5rem;
+   
 }
 .Logo{
-    width:12rem;
     height: 1rem;
     padding-left: 1rem;
     display: flex;
@@ -33,15 +34,7 @@ padding : 3rem;
     border-radius:12px;
     color:#FFFFFF;
 }
-.navContent1{
-    display:flex;
-    justify-content: space-between;
-    width: 16rem;
-    font-family: Reuben;
-    font-weight: 500;
-    align-items: center;
-    color:#FFFFFF;
-}
+
 .navContent2{
     display: flex;
     flex-direction: column;
@@ -62,7 +55,6 @@ padding : 3rem;
     align-items: center;
     font-family: Reuben;
     justify-content: space-between;
-    width:12rem;
     padding-right: 0.8rem;
     color: #FFFFFF;
 }
@@ -78,7 +70,7 @@ padding : 3rem;
     justify-content: center;
     font-size: 1.2rem;
     cursor: pointer;
-    font-family: 'Anton', sans-serif;
+    margin-left: 10px;
 }
 
 .navButton2{
@@ -90,6 +82,7 @@ padding : 3rem;
     height: 3rem;
     cursor: pointer;
     align-items: center;
+    color:#FFFFFF;
 }
 .bottomBorder{
     border-bottom: 1px solid gray;
@@ -139,12 +132,7 @@ padding : 3rem;
     color: #EA662F;
 }
 @media (max-width: 840px){
-    .Logo{
-        width:6rem;
-    }    
-    .navButton{
-        width:11rem;
-    }
+   
     .logo{
         width:5rem;
     }
@@ -158,7 +146,7 @@ padding : 3rem;
         padding: 0.3rem 1rem;
     }
 }
-@media (max-width: 706px){
+@media (max-width: 746px){
     .navContent1,.navButton{
         display: none;
     }  
@@ -176,13 +164,15 @@ padding : 3rem;
     }
    
 }
-@media (min-width: 706px){
+@media (min-width: 746px){
+
     .hamBtn{
         display:none;
     }
     .navContent2{
         display: none;
     }
+  
 }
 a{
     text-decoration: none;

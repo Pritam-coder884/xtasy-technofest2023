@@ -55,6 +55,21 @@ const addEventDataToFireStore = async (collectionKey, eventData) => {
   }
 };
 
+// get events details from database
+const getEventDetailsFormFireStore = async () => {
+  const collectionRef = collection(db, "events");
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  const eventsMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const data = docSnapshot.data();
+    acc.push(data);
+    return acc;
+  }, []);
+
+  return eventsMap;
+};
+
 // add collections and documents to firestore
 const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
   const collectionRef = collection(db, collectionKey);
@@ -150,4 +165,5 @@ export {
   onAuthStateChangedListener,
   addCollectionAndDocuments,
   addEventDataToFireStore,
+  getEventDetailsFormFireStore,
 };

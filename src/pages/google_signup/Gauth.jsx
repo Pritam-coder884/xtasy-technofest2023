@@ -1,45 +1,51 @@
-import React, { useEffect, useState } from "react";
-import Logout from "./Logout";
+import React,{useState,useEffect} from "react";
 import RegImg from "../../component/ImgReg/ImgReg";
 import "../signup/signup.style.scss";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { toast, ToastContainer } from "react-toastify";
-import { SignInWithGooglePopup } from "../../utils/firbase/firebase.utils";
+import {toast,ToastContainer} from "react-toastify";
+import {auth,provider} from  "../../utils/firbase/firebase.utils";
+import Logout from "./Logout.jsx";
+import { signInWithPopup } from "@firebase/auth";
+
+
 
 const Gauth = () => {
   const dispatch = useDispatch();
-  const { accessToken } = useSelector((state) => state.custom);
+  const {accessToken} = useSelector((state)=>state.custom)
 
-  const nav = useNavigate();
+  const nav=useNavigate();
 
   const [value, setValue] = useState("");
-  const handleClick = async () => {
-    try {
-      await SignInWithGooglePopup();
-      return toast.success("Successfully signed in", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
+  const handleClick =() => {
+    signInWithPopup(auth, provider).then((data) => {
+      const accesstoken=data.user.accessToken;
+      dispatch({type:"UpdateAccessToken",payload:accesstoken})
+
+      axios.get('http://localhost:4000/api/auth/signup', {
+        headers : {
+            Authorization : `Bearer ${accesstoken}`
+        }
+      })
+      .then(res => {
+        console.log(res.data);
+        nav("/register");
+      }).catch(err => {
+        // console.log(err.message);
+        toast.error("User Already exist");
       });
-    } catch (error) {
-      return toast.error("There was an error while Signing in !!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
+
+
+      setValue(data.user.email);
+      localStorage.setItem("email", data.user.email);
+    });
   };
 
+  useEffect(() => {
+    setValue(localStorage.getItem("email"));
+
+  });
   return (
     <div className="regpage">
       <div className="left_section">
@@ -57,26 +63,18 @@ const Gauth = () => {
         </div>
       </div>
       <div className="right_section">
-        <div className="r_head">
-          <h2>
-            REGISTER FOR THE EXCITING{" "}
-            <span style={{ color: "#EA662F" }}>RETRO</span> VERSE
-          </h2>
-          <div className="r_head_bottom">
-            <p style={{ color: "gray" }}>
-              Something really awesome is waiting for you register now to get
-              the updates
-            </p>
+         <div className="r_head">
+            <h2>REGISTER FOR THE EXCITING <span style={{color:"#EA662F"}}>RETRO</span> VERSE</h2>
+            <div className="r_head_bottom">
+                <p style={{color:"gray"}}>Something really awesome is waiting for you register now to get the updates</p>
+            </div>
           </div>
-        </div>
         {value ? (
           <Logout />
         ) : (
-          <button className="submitbtn" onClick={handleClick}>
-            SignIN With Google
-          </button>
+          <button className="submitbtn" onClick={handleClick}>SignIN With Google</button>
         )}
-      </div>
+    </div>
       <ToastContainer />
     </div>
   );

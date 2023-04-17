@@ -4,7 +4,7 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { store } from "./app/store";
+import store from "./Redux/store";
 
 import "./Assets/fonts/Reuben Condensed.otf";
 

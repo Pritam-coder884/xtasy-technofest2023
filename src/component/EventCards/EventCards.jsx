@@ -1,61 +1,23 @@
 import React from "react";
 import "./EventCards.scss";
 
-const EventCards = () => {
+const EventCards = ({id, name, handleClick ,desc}) => {
+  const nameArray = name.split(" ")
   return (
-    <div className="all">
-      <div className="cards">
-        <div className="card">
-          <div className="card-name">
-            <p>ROBO</p>
-            <p>SOCCER</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <p>ROBO</p>
-            <p>SOCCER</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <p>ROBO</p>
-            <p>SOCCER</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <p>ROBO</p>
-            <p>SOCCER</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <p>ROBO</p>
-            <p>SOCCER</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <p>ROBO</p>
-            <p>SOCCER</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <p>ROBO</p>
-            <p>SOCCER</p>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-name">
-            <p>ROBO</p>
-            <p>SOCCER</p>
-          </div>
+    <>
+      <div className="card" onClick={() => {handleClick(id, desc)}} >
+        <div className="card-name">
+          {nameArray.map((word)=>{
+            return(
+              <p>{word}</p>
+            ) 
+          })}
         </div>
       </div>
-    </div>
+    </>
   );
 };
+
+
 
 export default EventCards;

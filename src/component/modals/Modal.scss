@@ -28,6 +28,38 @@
       padding-top: 1rem;
     }
   }
+  .event-modal-content{
+    margin-right: 4rem;
+    display: flex;
+    align-items: center;
+    
+  }
+  .event-img-container{
+    // height: 10rem;
+    // width: 10rem;
+    margin-left: 2rem ;
+    background: #2E443C;
+    border-radius: 12px;
+    // flex: 1;
+    .event-image{
+      height: 15rem;
+      width: 15rem;
+      background-color: #fff;
+    }
+  }
+  .event-content{
+    margin: 0rem 2rem;
+    min-height: 15rem;
+    height: auto;
+    width: 70rem;
+    .event-description{
+      margin-bottom: 2rem;
+    }
+    .button-register{
+      width: max-content;
+    }
+    // flex: 2;
+  }
 }
 
 
@@ -38,3 +70,17 @@
 .display-none {
   display: none;
 }
+
+@media(max-width : "900px"){
+  .event-modal-content{
+    flex-direction: column;
+  }
+  .event-content{
+    width: 100% !important;
+
+  }
+  .event-img-container{
+    margin: 0rem !important;
+  }
+}
+

@@ -42,11 +42,6 @@ const Events = (props) => {
             CHECK OUT FOR <span className="fun-part">{props.text}</span>
           </p>
         </div>
-        <div className="buttons">
-          <button className="event-button">DAY-1</button>
-          <button className="event-button">DAY-2</button>
-          <button className="event-button">DAY-3</button>
-        </div>
       </div>
       <div className="event-cards-1">
         <div className="all-1">

@@ -1,46 +1,7 @@
-.events{
-    background-color: rgba(46, 68, 60, 1);
-}
-.event-top{
-    text-align: center;
-}
-.head-part{
-    margin: auto;
-    width: 300px;
-}
-.heading{
-    font-family: "Reuben";
-    letter-spacing: 1px;
-    font-size: 50px;
-    color: #F5EBB5;
-}
-.fun-part{
-    font-size: 50px;
-    color: #EA662F;
-}
-.buttons{
-    margin-top: -20px;
-}
-button{
-    font-family: "Reuben";
-    letter-spacing: 1px;
-    margin: 0 5px;
-    border-radius: 5px;
-    height: 40px;
-    width: 80px;
-    color: #F5EBB5;
-    background-color: #EA662F;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-button:hover{
-    background-color: #FFFCEB;
-    color: #000000;
-}
 .event-cards{
     margin-bottom: 50px;
+    background-color:  rgba(46, 68, 60, 1);
+    height: auto;
 }
 
 .cards{
@@ -54,6 +15,7 @@ button:hover{
     .all{
         display: flex;
         justify-content: center;
+        
     }
     .cards{
         margin: auto;

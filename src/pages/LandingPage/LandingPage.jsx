@@ -3,7 +3,7 @@ import Homepage from "../../component/slide4/Homepage";
 import HomeTop from "../../component/HomeTop/HomeTop";
 import TimeLine from "../../component/Timeline/Timeline";
 import Footer from "../../component/Footer/Footer";
-import Profile from "../../component/Profile";
+import Profile from "../../component/ProfileTop/ProfileTop";
 
 const LandingPage = () => {
   return (
@@ -12,7 +12,6 @@ const LandingPage = () => {
       <TimeLine />
       <Homepage />
       <Footer />
-      {/* <Profile/> */}
     </div>
   );
 };

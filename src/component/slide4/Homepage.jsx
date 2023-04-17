@@ -60,7 +60,6 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      {/* <Sponsors/> */}
     </>
   );
 };

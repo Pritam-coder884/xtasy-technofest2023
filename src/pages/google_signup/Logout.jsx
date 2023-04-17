@@ -1,4 +1,5 @@
 import React from 'react'
+import "../signup/signup.style.scss"
 
 const Logout = () => {
     const logout =()=>{
@@ -8,7 +9,7 @@ const Logout = () => {
     return (
         <div>
             <h1>Home Page</h1>
-            <button onClick={logout}>Logout</button>
+            <button className='submitbtn' onClick={logout}>Logout</button>
         </div>
     );
 }

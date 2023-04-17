@@ -1,0 +1,47 @@
+.image{
+    display: flex;
+    position: relative;
+    margin-top: -7rem;
+    margin-left: -6rem;
+    .circle{
+        position: absolute;
+        z-index: 1;
+        top: 22rem;
+        right: 6.5rem;
+        .cir{
+            width: 18rem;
+        }
+    }
+    .proj{
+        position: relative;
+        z-index: 5;
+        top: 22rem;
+        left: 25rem;
+        .pj{
+            width: 21rem;
+        }
+    }
+    .light{
+        position: relative;
+        z-index: 3;
+        right: 21rem;        
+        top:0rem;
+        .lt{
+            width: 32rem;
+            height: 28rem;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .image{
+        margin-left: -10rem;
+        margin-top: -7rem;
+    }
+}
+@media screen and (max-width:765px){
+    .image{
+        margin-left: -9rem;
+        margin-top: -8rem;
+    }
+}

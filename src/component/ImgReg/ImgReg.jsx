@@ -1,5 +1,5 @@
 import React from 'react'
-import "./img-reg.scss";
+import "./regimg.scss";
 import circle from "../../Assets/images/circle.png"
 import proj from "../../Assets/images/proj.png"
 import light from "../../Assets/images/light.png"

@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import "./signup.style.scss";
+// import "./reg.style.scss";
 import FormInput from "../../component/Form/FormInput";
 import RegImg from "../../component/ImgReg/ImgReg";
 import { toast, ToastContainer } from "react-toastify";

@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Roboto:wght@100&display=swap');
 .profileContainer{
-    background-color: rgba(46, 68, 60, 1);
+    background-color: rgb(46, 68, 60);
+    padding: 3rem 3rem 2rem 3rem;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .profileCard{
     display: flex;
     justify-content: left;
-    padding: 3rem 5rem 1rem 5rem;
-    width: 90vw;
+    padding: 0rem 0rem 2rem;
+    width: 90%;
 }
 .profileImg{
     background: #1A2D26;
@@ -41,7 +48,9 @@
     color: #F5EBB5;
     font-size: 24px;
     font-family: Reuben;
-    padding: 3rem 5rem 1rem 5rem;
+    padding: 3rem 0rem 1rem;
+    width: 90%;
+    margin: auto;
 }
 @media (max-width: 1370px){
     .detail{

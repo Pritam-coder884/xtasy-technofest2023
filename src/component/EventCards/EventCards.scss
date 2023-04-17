@@ -1,6 +1,6 @@
 .card{
     margin: auto;
-    margin: 20px 20px;
+    margin: 20px 0px;
     height: 220px;
     width: 200px;
     background-color: #F5EBB5;
@@ -29,4 +29,10 @@
     font-size: 15px;
     font-weight: 700;
     margin-left: 10px;
+}
+
+@media(max-width : 502px) {
+    .card{
+        margin: 20px 20px;
+    }
 }

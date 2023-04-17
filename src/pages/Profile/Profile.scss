@@ -1,21 +1,22 @@
 .event-cards{
-    margin-bottom: 50px;
     background-color:  rgba(46, 68, 60, 1);
-    height: auto;
 }
 
 .cards{
     margin: auto;
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr;
-    width: 1000px;
+    width: 90%;
+}
+
+.all{
+    padding: 0rem 3rem 3rem;
 }
 
 @media(max-width:1033px){
     .all{
         display: flex;
         justify-content: center;
-        
     }
     .cards{
         margin: auto;

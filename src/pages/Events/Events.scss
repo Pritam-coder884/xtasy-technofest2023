@@ -5,7 +5,7 @@
     text-align: center;
 }
 .head-part{
-    margin: auto;
+    margin: 0rem auto 4rem;
     width: 300px;
 }
 .heading{
@@ -40,7 +40,7 @@ button{
 .event-button{
     font-family: "Reuben";
     letter-spacing: 1px;
-    margin: 0 5px;
+    margin: 0 1rem;
     border-radius: 5px;
     height: 40px;
     width: 80px;
@@ -54,43 +54,46 @@ button{
 .event-button:hover{
     background-color: #FFFCEB;
     color: #000000;
+    cursor: pointer;
 }
 
-.cards{
-    margin: auto;
+.cards-1{
+    margin: 2rem auto 4rem;
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr;
-    width: 1000px;
+    width: 90%;
+    justify-items: center;
+    align-items: center;
 }
 
 @media(max-width:1033px){
-    .all{
+    .all-1{
         display: flex;
         justify-content: center;
     }
-    .cards{
-        margin: auto;
+    .cards-1{
+        margin: 2rem auto 4rem;
         width: 800px;
         grid-template-columns: 4fr 4fr 4fr;
     }
 }
 @media(max-width:825px){
-    .all{
+    .all-1{
         display: flex;
         justify-content: center;
     }
-    .cards{
-        margin: auto;
+    .cards-1{
+        margin: 2rem auto 4rem;
         width: 500px;
         grid-template-columns: 6fr 6fr;
     }
 }
 @media(max-width:501px){
-    .all{
+    .all-1{
         display: flex;
         justify-content: center;
     }
-    .cards{
+    .cards-1{
         width: 250px;
         grid-template-columns: 12fr;
     }

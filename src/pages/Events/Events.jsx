@@ -48,9 +48,9 @@ const Events = (props) => {
           <button className="event-button">DAY-3</button>
         </div>
       </div>
-      <div className="event-cards">
-        <div className="all">
-          <div className="cards">
+      <div className="event-cards-1">
+        <div className="all-1">
+          <div className="cards-1">
             {events.map((event) => {
               return (
                 <EventCards key={event.id} id={event.id} name={event.name} desc={event.desc} handleClick={handleClick} />

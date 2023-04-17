@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Logout = () => {
     const logout =()=>{
@@ -7,7 +8,7 @@ const Logout = () => {
     }
     return (
         <div>
-            <h1>Home Page</h1>
+            <Link to="/"><h1>Home Page</h1></Link>
             <button onClick={logout}>Logout</button>
         </div>
     );

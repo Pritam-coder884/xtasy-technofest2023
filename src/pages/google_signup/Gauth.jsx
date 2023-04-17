@@ -5,21 +5,48 @@ import Logout from "./Logout";
 import RegImg from "../../component/ImgReg/ImgReg";
 import "../signup/signup.style.scss";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import {toast,ToastContainer} from "react-toastify";
+
 
 const Gauth = () => {
-    const nav=useNavigate();
+  const dispatch = useDispatch();
+  const {accessToken} = useSelector((state)=>state.custom)
+
+  const nav=useNavigate();
+
   const [value, setValue] = useState("");
-  const handleClick = () => {
+  const handleClick =() => {
     signInWithPopup(auth, provider).then((data) => {
+      const accesstoken=data.user.accessToken;
+      dispatch({type:"UpdateAccessToken",payload:accesstoken})
+        
+      axios.get('http://localhost:4000/api/auth/signup', {
+        headers : {
+            Authorization : `Bearer ${accesstoken}`
+        }
+      })
+      .then(res => {
+        console.log(res.data);
+        nav("/register");
+      }).catch(err => {
+        // console.log(err.message);
+        toast.error("User Already exist");
+      });
+
+
       setValue(data.user.email);
       localStorage.setItem("email", data.user.email);
-      nav("/register");
     });
   };
 
+
+
+
+
   useEffect(() => {
     setValue(localStorage.getItem("email"));
-    console.log(value);
 
   });
 
@@ -49,11 +76,14 @@ const Gauth = () => {
         {value ? (
           <Logout />
         ) : (
-          <button className="submitbtn" onClick={handleClick}>Signup With Google</button>
+          <button className="submitbtn" onClick={handleClick}>SignIN With Google</button>
         )}
-      </div>
+    </div>
+      <ToastContainer />
     </div>
   );
 };
 
 export default Gauth;
+
+

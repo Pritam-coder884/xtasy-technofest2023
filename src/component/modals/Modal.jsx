@@ -14,7 +14,7 @@ const Modal = ({ handleClose, show, children, handleOutsideClick, size, events }
   }
   return (
     <div className={showHideClassName} onClick={handleOutsideClick} >
-      <div style={customStyle} className="modal-main" onClick={(e) => { e.stopPropagation() }} >
+      <div style={customStyle}  className="modal-main" onClick={(e) => { e.stopPropagation() }} >
         {!size &&
         <div className="event-modal-content">
           <div className="event-img-container">

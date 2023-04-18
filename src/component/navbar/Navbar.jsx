@@ -25,7 +25,7 @@ const Navbar = () => {
           {pathname === "/" ? <a href="#events"><div className="textBtn">events</div></a> : <Link to="/"><div className="textBtn">Home</div></Link>}
           {pathname === "/" && <a href="#timeline"><div className="textBtn">timeline</div></a>}
             <Link to="/profile"><div className="textBtn">profile</div></Link>
-            <div className="textBtn">Sign In</div>
+            {/* <div className="textBtn">Sign In</div> */}
             <Link to="/gauth"><div className="regButton">Register</div></Link>
           </div>
 

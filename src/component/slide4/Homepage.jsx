@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Homepage.scss";
 import clockImg from "../../Assets/images/clock.png";
 import Img from "../../Assets/images/demo.png";
 import Sponsors from "./Sponsors";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
 const Homepage = () => {
+  const dispatch = useDispatch();
+  const {eventList} = useSelector((state)=>state.custom)
+
+  const getAllEvents = async () => {
+    try {
+      const response = await axios.get(
+        "http://xtasy-backend.onrender.com/api/event/getAllEvents"
+      );
+      const getData=response.data.data;
+      console.log(getData);
+     
+
+    } catch (err) {
+      throw new Error(err.message);
+    }
+  }
+
+
+    
+
+  useEffect(()=>{getAllEvents()})
   return (
     <>
       <div className="container" id="events">

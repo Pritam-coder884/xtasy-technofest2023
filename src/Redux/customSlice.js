@@ -4,7 +4,9 @@ import axios from "axios";
 const initialState = {
     accessToken:"",
     eventList:[],
+    userEventList:[],
     isLoading : false,
+    isProfileLoading : false,
     error : ""
 }
 
@@ -15,7 +17,17 @@ export const fetchAllEvents = createAsyncThunk("events/fetchAllEvents" , async (
 })
 
 // fetch events for user
-
+export const fetchUserEvents = createAsyncThunk("events/fetchUserEvents", async(name, thunkAPI) => {
+    console.log(thunkAPI);
+    const state = thunkAPI.getState();
+    const {data} = await axios.get("https://xtasy-backend.onrender.com/api/user/details",{
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization' : state.custom.accessToken
+        },
+      })
+      return data.data
+})
 
 // register user for a event
 
@@ -38,6 +50,17 @@ const customSlice = createSlice({
         })
         build.addCase(fetchAllEvents.rejected , (state ,action) => {
             state.isLoading = false;
+            state.error = action.payload
+        })
+        build.addCase(fetchUserEvents.fulfilled, (state,action) => {
+            state.userEventList=action.payload
+            state.isProfileLoading=false
+        })
+        build.addCase(fetchUserEvents.pending, (state,action) => {
+            state.isProfileLoading=true
+        })
+        build.addCase(fetchUserEvents.rejected, (state,action) => {
+            state.isProfileLoading=false
             state.error = action.payload
         })
     }

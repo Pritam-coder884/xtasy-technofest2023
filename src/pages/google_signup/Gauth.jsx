@@ -51,8 +51,9 @@ const Gauth = () => {
 
       
       const url = `${process.env.REACT_APP_API_URL}/api/auth/signup`;
-			const { userAuth: res } = await axios.post(url, userAuth);
+			const { data } = await axios.post(url, userAuth);
 
+      console.log(data.data) 
       
       console.log("registered successfully");
       
@@ -62,8 +63,16 @@ const Gauth = () => {
     }
     
   };
-  const handleClickLogin=()=>{
+  const handleClickLogin=async(e)=>{
+    e.preventDefault();
+    try{
+      const url = `${process.env.REACT_APP_API_URL}/api/auth/login`
+      const {data} = await axios.post(url , userAuth)
 
+      console.log(data.data)
+    } catch(error){
+      throw new Error(error.message);
+    }
   }
 
   const handleAuthChange = (e) => {

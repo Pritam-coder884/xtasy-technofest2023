@@ -25,7 +25,7 @@ const Navbar = () => {
           {pathname === "/" ? <a href="#events"><div className="textBtn">events</div></a> : <Link to="/"><div className="textBtn">Home</div></Link>}
           {pathname === "/" && <a href="#timeline"><div className="textBtn">timeline</div></a>}
             <Link to="/profile"><div className="textBtn">profile</div></Link>
-            <div className="textBtn">Sign In</div>
+            {/* <div className="textBtn">Sign In</div> */}
             <Link to="/gauth"><div className="regButton">Register</div></Link>
           </div>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
           {pathname === "/" ? <a href="#events" className="navButton2 bottomBorder"><div>events</div></a> : <Link to="/" className="navButton2 bottomBorder"><div className="textBtn">Home</div></Link>}
           {pathname === "/" && <a href="#timeline" className="navButton2 bottomBorder"><div>timeline</div></a>}
             <Link to="/profile" className="navButton2 bottomBorder"><div >profile</div></Link>
-            <div className="navButton2 ">Sign In</div>
+            {/* <div className="navButton2 ">Sign In</div> */}
             <Link to="/gauth"  className="regButton2"><div>Register</div></Link>
           </div>
         </div>

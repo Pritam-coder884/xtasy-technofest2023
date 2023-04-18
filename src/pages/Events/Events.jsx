@@ -8,7 +8,7 @@ import { useState } from "react";
 import Modal from "../../component/modals/Modal";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
+import { technical } from "../../eventsData/technical"
 
 const Events = (props) => {
   const [show, setShow] = useState(false);
@@ -42,18 +42,13 @@ const Events = (props) => {
             CHECK OUT FOR <span className="fun-part">{props.text}</span>
           </p>
         </div>
-        <div className="buttons">
-          <button className="event-button">DAY-1</button>
-          <button className="event-button">DAY-2</button>
-          <button className="event-button">DAY-3</button>
-        </div>
       </div>
       <div className="event-cards-1">
         <div className="all-1">
           <div className="cards-1">
-            {events.map((event) => {
+            {technical.map((event,index) => {
               return (
-                <EventCards key={event.id} id={event.id} name={event.name} desc={event.desc} handleClick={handleClick} />
+                <EventCards key={event.id} name={event.eventName} desc={event} handleClick={handleClick} img={index + 1}/>
               )
             })}
           </div>

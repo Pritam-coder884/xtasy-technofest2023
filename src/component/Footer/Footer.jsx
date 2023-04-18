@@ -9,7 +9,7 @@ const Footer = () => {
             <h2>For further details contact : </h2>
             <p className="row">
                 <p className="lefty">xtasy.2023@outr.in</p>
-                <p className="righty">1234567890</p>
+                <p className="righty">7684811743</p>
             </p>
         </div>
         <div className="right">

@@ -8,28 +8,7 @@ import { useState } from "react";
 import Modal from "../../component/modals/Modal";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { technical } from "../../eventsData/technical";
-import one from "../../Assets/images/posters/1.webp"
-import two from "../../Assets/images/posters/1.webp"
-import three from "../../Assets/images/posters/1.webp"
-import four from "../../Assets/images/posters/1.webp"
-import five from "../../Assets/images/posters/1.webp"
-import six from "../../Assets/images/posters/1.webp"
-import seven from "../../Assets/images/posters/1.webp"
-import eight from "../../Assets/images/posters/1.webp"
-import nine from "../../Assets/images/posters/1.webp"
-import ten from "../../Assets/images/posters/1.webp"
-import eleven from "../../Assets/images/posters/1.webp"
-import twelve from "../../Assets/images/posters/1.webp"
-import thirteen from "../../Assets/images/posters/1.webp"
-import fourteen from "../../Assets/images/posters/1.webp"
-import fifteen from "../../Assets/images/posters/1.webp"
-import sixteen from "../../Assets/images/posters/1.webp"
-import seventeen from "../../Assets/images/posters/1.webp"
-import eighteen from "../../Assets/images/posters/1.webp"
-import ninteen from "../../Assets/images/posters/1.webp"
-import twenty from "../../Assets/images/posters/1.webp"
-
+import { technical } from "../../eventsData/technical"
 
 const Events = (props) => {
   const [show, setShow] = useState(false);

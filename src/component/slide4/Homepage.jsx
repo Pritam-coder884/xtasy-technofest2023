@@ -20,14 +20,14 @@ const Homepage = () => {
         </div>
         <div className="partTwo">
           <div className="cardContainer">
-          <Link to="/funEvents" ><div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
+          <Link to="/funEvents" ><div className='eventCards' style={{backgroundImage:`url(./posters/Tech.png)`, backgroundSize:"cover"}}>
                     <div className='cardText'>
-                        <div>Fun</div>
+                        <div>Tech</div>
                         <div>Events</div>
                     </div>
                 </div>
                 </Link>
-                <Link to="/cultEvents" ><div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
+                <Link to="/cultEvents" ><div className='eventCards' style={{backgroundImage:`url(./posters/Cultural.png)`, backgroundSize:"cover"}}>
                     <div className='cardText'>
                         <div>Cultural</div>
                         <div>Events</div>
@@ -36,16 +36,16 @@ const Homepage = () => {
                 </Link>
           </div>
           <div className="cardContainer">
-          <Link to="/techEvents" ><div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
+          <Link to="/techEvents" ><div className='eventCards' style={{backgroundImage:`url(./posters/Workshop.png)`, backgroundSize:"cover"}}>
                     <div className='cardText'>
-                        <div>Technical</div>
-                        <div>Events</div>
+                        <div>Workshop</div>
                     </div>
                 </div>
                 </Link>
-                <Link to="/workshops" ><div className='eventCards' style={{backgroundImage:`url()`, backgroundSize:"cover"}}>
+                <Link to="/workshops" ><div className='eventCards' style={{backgroundImage:`url(./posters/Fun.png)`, backgroundSize:"cover"}}>
                     <div className='cardText'>
-                        <div>Workshops</div>
+                        <div>Fun</div>
+                        <div>Events</div>
                     </div>
                 </div>
                 </Link>

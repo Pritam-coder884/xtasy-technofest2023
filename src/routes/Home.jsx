@@ -7,6 +7,8 @@ import Events from '../pages/Events/Events';
 import {Routes,Route} from "react-router-dom";
 import Gauth from '../pages/google_signup/Gauth';
 import Profile from '../pages/Profile/Profile';
+import NotFound from '../pages/404NotFound/404NotFound';
+
 
 const Home = () => {
   return (
@@ -20,6 +22,7 @@ const Home = () => {
     <Route path="/cultEvents" element={<Events text='CULTURAL EVENTS'/>} />
     <Route path="/techEvents" element={<Events text='TECHNICAL EVENTS'/>} />
     <Route path="/workshops" element={<Events text='WORKSHOPS'/>} />
+    <Route path="*" element={<NotFound/>} />
   </Routes>
  
   )

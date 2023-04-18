@@ -8,26 +8,17 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 const Homepage = () => {
   const dispatch = useDispatch();
-  const {eventList} = useSelector((state)=>state.custom)
+  const {eventList} = useSelector((state)=>state.custom)    
 
-  const getAllEvents = async () => {
-    try {
-      const response = await axios.get(
-        "http://xtasy-backend.onrender.com/api/event/getAllEvents"
-      );
-      const getData=response.data.data;
-      console.log(getData);
-     
-
-    } catch (err) {
-      throw new Error(err.message);
+  useEffect(()=>{
+    const fetchAllEvents = async() => {
+      const {data} = await axios.get("https://xtasy-backend.onrender.com/api/event/getAllEvents")
+      console.log(data)
+      // dispatch
     }
-  }
+    fetchAllEvents()
+  })
 
-
-    
-
-  useEffect(()=>{getAllEvents()})
   return (
     <>
       <div className="container" id="events">

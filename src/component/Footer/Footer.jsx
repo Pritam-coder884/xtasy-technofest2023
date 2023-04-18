@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="right">
             <p>Designed & devoloped with ❤️</p>
-            <p>by <a href='zairza.in' className='zairza'>zairza</a></p>
+            <p>by <a href='https://instagram.com/zairza.outr?igshid=YmMyMTA2M2Y=' target='_blank' className='zairza'>zairza</a></p>
         </div>
       </div>
     </div>

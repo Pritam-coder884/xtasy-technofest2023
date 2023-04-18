@@ -12,7 +12,6 @@ const Modal = ({ handleClose, show, children, handleOutsideClick, size, events }
     transform: "translate(-50%, -50%)",
     fontFamily : size ? "Reuben" : "sans-serif"
   }
-  {console.log(events);}
   return (
     <div className={showHideClassName} onClick={handleOutsideClick} >
       <div style={customStyle} className="modal-main" onClick={(e) => { e.stopPropagation() }} >
@@ -20,24 +19,25 @@ const Modal = ({ handleClose, show, children, handleOutsideClick, size, events }
         <div className="event-modal-content">
           <div className="event-img-container">
               <div className="event-image">
-                Hello
+              <img src={`./posters/${children.id}.webp`} alt=""
+              style={{height:"15rem",width:"15rem"}}
+              />        
               </div>
           </div>
           <div className="event-content">
-              <h1 className="event-heading">Event Name</h1>
+              <h1 className="event-heading">{children.eventName}</h1>
               <div className="event-details">
                   <div className="event-details-1">
-                    <p>Date & Time</p>
-                    <p>13th Mar 2023,8:00 pm</p>
+                    <p style={{fontSize:"0.9rem"}}>Date & Time: {children.date}, {children.time}</p>
+                    <p></p>
                   </div>
                   <div className="events-details-2">
-                    <p>Game Details</p>
-                    <p>Link Here</p>
+                    <p style={{fontSize:"0.9rem"}}>Venue: {children.venue}</p>
+                    <a href={children.rules} style={{color:"#F5EBB5", textDecoration:"underline", fontSize:"0.9rem", paddingBottom:"1rem"}}>Rulebook: Click here to get the rulebook</a>
                   </div>
               </div>
-              <div className="event-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia provident voluptatum quia commodi! Dignissimos molestiae illum, nobis vero assumenda quasi quisquam reprehenderit consequuntur. Quae, accusamus itaque. Similique voluptate amet, incidunt corrupti tempora aspernatur et iste odit suscipit deleniti deserunt, dolore beatae dolorum nam mollitia. Earum quasi cumque ullam magnam totam ex iusto neque magni vitae excepturi aperiam officiis, labore nostrum!
-              </div>
+              <div style={{marginTop:"1rem"}}className="event-description">
+                {children.eventDetails}              </div>
               <button type="button" className="button-register">Register</button>
           </div>
           <button type="button" onClick={handleClose} style={{ position: "absolute", top: "5px", right: "5px", width: "50px" }}>X</button>

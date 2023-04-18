@@ -8,6 +8,27 @@ import { useState } from "react";
 import Modal from "../../component/modals/Modal";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { technical } from "../../eventsData/technical";
+import one from "../../Assets/images/posters/1.webp"
+import two from "../../Assets/images/posters/1.webp"
+import three from "../../Assets/images/posters/1.webp"
+import four from "../../Assets/images/posters/1.webp"
+import five from "../../Assets/images/posters/1.webp"
+import six from "../../Assets/images/posters/1.webp"
+import seven from "../../Assets/images/posters/1.webp"
+import eight from "../../Assets/images/posters/1.webp"
+import nine from "../../Assets/images/posters/1.webp"
+import ten from "../../Assets/images/posters/1.webp"
+import eleven from "../../Assets/images/posters/1.webp"
+import twelve from "../../Assets/images/posters/1.webp"
+import thirteen from "../../Assets/images/posters/1.webp"
+import fourteen from "../../Assets/images/posters/1.webp"
+import fifteen from "../../Assets/images/posters/1.webp"
+import sixteen from "../../Assets/images/posters/1.webp"
+import seventeen from "../../Assets/images/posters/1.webp"
+import eighteen from "../../Assets/images/posters/1.webp"
+import ninteen from "../../Assets/images/posters/1.webp"
+import twenty from "../../Assets/images/posters/1.webp"
 
 
 const Events = (props) => {
@@ -46,9 +67,9 @@ const Events = (props) => {
       <div className="event-cards-1">
         <div className="all-1">
           <div className="cards-1">
-            {events.map((event) => {
+            {technical.map((event,index) => {
               return (
-                <EventCards key={event.id} id={event.id} name={event.name} desc={event.desc} handleClick={handleClick} />
+                <EventCards key={event.id} name={event.eventName} desc={event} handleClick={handleClick} img={index + 1}/>
               )
             })}
           </div>

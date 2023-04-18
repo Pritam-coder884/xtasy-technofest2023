@@ -17,7 +17,7 @@ const ProfileTop = () => {
  const handleGetData=async()=>{
     try {
         const response = await axios.get(
-          "http://localhost:4000/api/user/details",
+          `${process.env.REACT_APP_API_URL}/api/user/details`,
           {
             headers : {
                 Authorization : `Bearer ${accessToken}`
@@ -25,7 +25,7 @@ const ProfileTop = () => {
           },
         );
         const getData=response.data.data;
-        // console.log(getData);
+        console.log(getData);
         setName(getData.name);
         setEmail(getData.firebaseUid);
         setPhoneno(getData.phoneNumber);

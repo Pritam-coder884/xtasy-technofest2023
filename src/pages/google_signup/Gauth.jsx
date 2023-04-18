@@ -3,7 +3,7 @@ import RegImg from "../../component/ImgReg/ImgReg";
 import "../signup/signup.style.scss";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"
 import {toast,ToastContainer} from "react-toastify";
 import {auth,provider} from  "../../utils/firbase/firebase.utils";
 import Logout from "./Logout.jsx";
@@ -23,7 +23,7 @@ const Gauth = () => {
       const accesstoken=data.user.accessToken;
       dispatch({type:"UpdateAccessToken",payload:accesstoken})
 
-      axios.get('http://localhost:4000/api/auth/signup', {
+      axios.get(`${process.env.REACT_APP_API_URL}/api/auth/signup`, {
         headers : {
             Authorization : `Bearer ${accesstoken}`
         }

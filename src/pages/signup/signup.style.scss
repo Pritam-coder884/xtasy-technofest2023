@@ -1,20 +1,19 @@
 .regpage{
-    margin-top: -2rem;
     display: flex;
-    height: 54rem;
+    height: 60rem;
     width: 100%;
     color: #F5EBB5;
     font-family: Reuben;
     .left_section{
+        padding-left: 5rem;
         width: 60%;
         background: #1A2D26;
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: start;
         .head{
-            padding-left: 10rem;
             top: 8rem;
             position: absolute;
             z-index: 10;
@@ -31,7 +30,6 @@
             color:#7B8382;
             font-size: 20px;
             width: 10rem;
-            padding-left: 8rem;
             margin-top: -10rem;
         }
     }
@@ -47,21 +45,24 @@
             font-size: 36px;
             text-align: center;
         }
-        .submitbtn{
-            width: 25rem;
-            height: 4rem;
-            background-color: #EA662F;
-            font-size: 20px;
-            color: white;
-            border: none;
-            border-radius: 16px;
-            cursor: pointer;
+        .bt_container{
+            padding-top: 2rem;
+            .submitbtn{
+                width: 24.5rem;
+                height: 3rem;
+                background-color: #EA662F;
+                font-size: 20px;
+                color: white;
+                border: none;
+                border-radius: 10px;
+            }
         }
     }
 }
 
 @media screen and (max-width:1500px) {
     .regpage{
+        height: 60rem;
         .left_section{
             width: 52rem;
             .head{
@@ -73,7 +74,7 @@
         }
         .right_section{
             margin-top: -5rem;
-            width: 40rem;
+            width: 45rem;
             .r_head{
                 width: 22rem;
                 font-size: 28px;
@@ -81,10 +82,12 @@
         }
     }
 }
-@media screen and (min-width:1240px) and (max-width:1300px) {
+@media screen and (max-width:1280px) {
     .regpage{
+        height: 55rem;
         .left_section{
-            width: 48rem;
+            width: 45rem;
+            margin-left: -2rem;
             .head{
                 font-size: large;
                 h1{
@@ -100,24 +103,14 @@
         }
     }
 }
-@media screen and (min-width:1125px) and (max-width:1240px) {
+@media screen and (max-width:1024px) {
     .regpage{
-        .right_section{
-            .submitbtn{
-                width:20.2rem;
-                height:3rem;
-                border-radius: 12px;
-            }
-        }
-    }
-}
-@media screen and (max-width:1120px) and (min-width:950px) {
-    .regpage{
+        height: 55rem;
         .left_section{
-            width: 40rem;
+            margin-left: -2rem;
+            width: 60%;
             .head{
                 font-size: large;
-                padding-left: 5rem;
                 h1{
                     font-size: 65px;
                 }
@@ -126,23 +119,26 @@
         .right_section{
             margin-top: -5rem;
             width: 30rem;
+            align-items: center;justify-content: center;
             .r_head{
                 width: 20rem;
                 font-size: 25px;
             }
-            .submitbtn{
-                width:20rem;
-                height:3rem;
-                border-radius: 12px;
-                font-size: 16px;
-            }
+                .submitbtn{
+                    width:19.3rem;
+                    height:3rem;
+                    border-radius: 12px;
+                    font-size: 16px;
+                }
         }
     }
 }
-@media screen and (max-width:950px) and (min-width:750px) {
+@media screen and (max-width:768px) {
     .regpage{
+        height: 55rem;
         .left_section{
             width: 38rem;
+            margin-left: -7rem;
             .head{
                 font-size: medium;
                 padding-left: 4.5rem;
@@ -155,19 +151,19 @@
             .subscript{
                 font-size: 18px;
                 width: 9rem;
-                padding-left: 6rem;
+                padding-left: 4.5rem;
                 margin-top: -10rem;
             }
         }
         .right_section{
             margin-top: -5rem;
-            width: 32rem;
+            width: 35rem;
             .r_head{
                 width: 20rem;
                 font-size: 20px;
             }
             .submitbtn{
-                width:17rem;
+                width:16.5rem;
                 height:3rem;
                 border-radius: 12px;
                 font-size: 16px;
@@ -177,11 +173,27 @@
 }
 @media screen and (max-width:750px) and (min-width:200px) {
     .regpage{
+        display: flex;
+        justify-content: start;
+        margin-top: 5rem;
+        height: 50rem;
         .left_section{
             display: none;
         }
         .right_section{
             padding: 0 4rem;
+            justify-content: flex-start;
+            align-items: center;
+            .r_head{
+                width: 20rem;
+                font-size: 25px;
+            }
+            .submitbtn{
+                width: 24.3rem;
+                height:3.2rem;
+                border-radius: 10px;
+                font-size: 16px;
+            }
         }
     }
 }

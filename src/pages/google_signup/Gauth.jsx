@@ -58,6 +58,7 @@ const Gauth = () => {
       </div>
       <div className="right_section">
         <div className="r_head">
+
           <h2>
             REGISTER FOR THE EXCITING{" "}
             <span style={{ color: "#EA662F" }}>RETRO</span> VERSE
@@ -67,14 +68,16 @@ const Gauth = () => {
               Something really awesome is waiting for you register now to get
               the updates
             </p>
+
           </div>
         </div>
         {value ? (
           <Logout />
         ) : (
-          <button className="submitbtn" onClick={handleClick}>
-            SignIN With Google
-          </button>
+          <div className="bt_container">
+          <button className="submitbtn" onClick={handleClick}>SignIN With Google</button>
+          </div>
+
         )}
       </div>
       <ToastContainer />

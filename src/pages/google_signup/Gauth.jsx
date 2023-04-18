@@ -8,6 +8,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { auth, provider } from "../../utils/firbase/firebase.utils";
 import Logout from "./Logout.jsx";
 import FormInput from "../../component/Form/FormInput";
+import { updateAccessToken } from "../../Redux/customSlice";
 
 const Gauth = () => {
   const dispatch = useDispatch();
@@ -43,7 +44,6 @@ const Gauth = () => {
 
     e.preventDefault();
 
-    console.log(userAuth);
     try {
       // const response = await axios.post(
       //   `${process.env.REACT_APP_API_URL}/api/auth/signup`,userAuth
@@ -53,11 +53,13 @@ const Gauth = () => {
       const url = `${process.env.REACT_APP_API_URL}/api/auth/signup`;
 			const { data } = await axios.post(url, userAuth);
 
-      console.log(data.data) 
+      // console.log(data.data) 
+      const accesstoken=data.data;
+      dispatch(updateAccessToken(accesstoken))
+      localStorage.setItem("token" , accesstoken)
       
-      console.log("registered successfully");
       
-      // nav("/register");
+      nav("/register");
     } catch (err) {
       throw new Error(err.message);
     }
@@ -69,7 +71,10 @@ const Gauth = () => {
       const url = `${process.env.REACT_APP_API_URL}/api/auth/login`
       const {data} = await axios.post(url , userAuth)
 
-      console.log(data.data)
+      const accesstoken=data.data;
+      dispatch(updateAccessToken(accesstoken))
+      localStorage.setItem("token" , data.data)
+      nav("/profile")
     } catch(error){
       throw new Error(error.message);
     }

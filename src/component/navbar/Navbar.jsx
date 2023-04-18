@@ -9,6 +9,9 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [navBtn, setNavBtn] = useState(false);
   const { pathname } = useLocation();
+
+  const accessToken = localStorage.getItem("token")
+
   return (
     <div className="NavAll">
       <div className="Navbar">
@@ -26,7 +29,7 @@ const Navbar = () => {
           {pathname === "/" && <a href="#timeline"><div className="textBtn">timeline</div></a>}
             <Link to="/profile"><div className="textBtn">profile</div></Link>
             {/* <div className="textBtn">Sign In</div> */}
-            <Link to="/gauth"><div className="regButton">Register</div></Link>
+            {!accessToken && <Link to="/gauth"><div className="regButton">Register</div></Link>}
           </div>
 
           <img
@@ -44,7 +47,7 @@ const Navbar = () => {
           {pathname === "/" && <a href="#timeline" className="navButton2 bottomBorder"><div>timeline</div></a>}
             <Link to="/profile" className="navButton2 bottomBorder"><div >profile</div></Link>
             {/* <div className="navButton2 ">Sign In</div> */}
-            <Link to="/gauth"  className="regButton2"><div>Register</div></Link>
+            {!accessToken && <Link to="/gauth"  className="regButton2"><div>Register</div></Link>}
           </div>
         </div>
       )}

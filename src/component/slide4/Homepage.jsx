@@ -11,10 +11,9 @@ const Homepage = () => {
   const dispatch = useDispatch();
   const {eventList} = useSelector((state)=>state.custom)
   // console.log("IN HOme page")
-  useEffect(()=>{
-    dispatch(fetchAllEvents())
-    console.log(eventList)
-  },[])
+  // useEffect(()=>{
+  //   dispatch(fetchAllEvents())
+  // },[])
 
   return (
     <>

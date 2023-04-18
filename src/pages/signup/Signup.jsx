@@ -21,6 +21,7 @@ const Signup = () => {
   const {accessToken} = useSelector((state)=>state.custom)
 
 
+
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
     if (userRegister.phoneNumber.length !== 10) {
@@ -42,8 +43,7 @@ const Signup = () => {
           }
         },
       );
-      console.log("registered successfully");
-      nav("/");
+      nav("/profile");
     } catch (err) {
       throw new Error(err.message);
     }

@@ -3,7 +3,7 @@ import "./EventCards.scss";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const EventCards = ({id, name, handleClick ,desc, img}) => {
-  const nameArray = name.split(" ")
+  // const nameArray = name.split(" ")
   return (
     <>
       <div className="eventCard" onClick={() => {handleClick(id, desc)}} >

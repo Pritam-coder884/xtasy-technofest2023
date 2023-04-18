@@ -1,5 +1,7 @@
 import React from "react";
 import "./Modal.scss";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Modal = ({ handleClose, show, children, handleOutsideClick, size, events }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
@@ -12,6 +14,25 @@ const Modal = ({ handleClose, show, children, handleOutsideClick, size, events }
     transform: "translate(-50%, -50%)",
     fontFamily : size ? "Reuben" : "sans-serif"
   }
+
+  const accessToken = localStorage.getItem("token")
+
+  const handleRegister = async(eventId) => {
+   const {status} = await axios.post(`${process.env.REACT_APP_API_URL}/api/event/registerEvent/${eventId}` , {} , {
+      headers : {
+        Authorization : `Bearer ${accessToken}`
+      }
+    })
+
+    if(status === 200){
+      toast.success("You have registered for the event")
+      return;
+    } else {
+      toast.error("Please try again")
+      return
+    }
+  }
+
   return (
     <div className={showHideClassName} onClick={handleOutsideClick} >
       <div style={customStyle}  className="modal-main" onClick={(e) => { e.stopPropagation() }} >
@@ -38,7 +59,9 @@ const Modal = ({ handleClose, show, children, handleOutsideClick, size, events }
               </div>
               <div style={{marginTop:"1rem"}}className="event-description">
                 {children.eventDetails}              </div>
-              <button type="button" className="button-register">Register</button>
+              <button type="button" className="button-register" onClick={() => {
+                handleRegister(children._id)
+              }}>Register</button>
           </div>
           <button type="button" onClick={handleClose} style={{ position: "absolute", top: "5px", right: "5px", width: "50px" }}>X</button>
         </div>}

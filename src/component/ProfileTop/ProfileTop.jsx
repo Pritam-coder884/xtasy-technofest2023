@@ -3,7 +3,7 @@ import "./ProfileTop.scss"
 import { useSelector } from "react-redux";
 import axios from "axios";
 
-const ProfileTop = () => {
+const ProfileTop = ({setEvents}) => {
     
  const [name,setName]=useState("");
  const [email,setEmail]=useState("");
@@ -12,20 +12,31 @@ const ProfileTop = () => {
  const [xtasyid,setXtasyid]=useState("");
  
 
- const {accessToken} = useSelector((state)=>state.custom)
+ let {accessToken} = useSelector((state)=>state.custom)
 
  const handleGetData=async()=>{
     try {
+
+      if(!accessToken){
+        accessToken = localStorage.getItem("token")
+      }
         const response = await axios.get(
           `${process.env.REACT_APP_API_URL}/api/user/details`,
-          {
+          { 
             headers : {
                 Authorization : `Bearer ${accessToken}`
             }
           },
         );
         const getData=response.data.data;
-        console.log(getData);
+          console.log(getData)
+        const eventData = await axios.get(`${process.env.REACT_APP_API_URL}/api/event/registeredEvents`,{
+          headers : {
+            Authorization : `Bearer ${accessToken}`
+          }
+        })
+        setEvents(eventData.data.data)
+        console.log(eventData.data.data)
         setName(getData.name);
         setEmail(getData.firebaseUid);
         setPhoneno(getData.phoneNumber);

@@ -9,12 +9,13 @@ import Modal from "../../component/modals/Modal";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { technical } from "../../eventsData/technical"
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllEvents } from "../../Redux/customSlice";
 
 const Events = (props) => {
   
   const {isLoading} = useSelector((state) => state.custom.isLoading);
- 
+  const dispatch = useDispatch()
   
   const [show, setShow] = useState(false);
   const [modalId, setModalId] = useState(null);
@@ -35,9 +36,13 @@ const Events = (props) => {
     window.scrollTo(0, 0);
   },[pathname])
 
+  useEffect(() => {
+    dispatch(fetchAllEvents())
+  },[])
+
 
   if(isLoading) {
-    console.log(isLoading)
+    // console.log(isLoading)
     return <></>
   }
 

@@ -107,7 +107,7 @@ const Gauth = () => {
             <span style={{ color: "#EA662F" }}>RETRO</span> VERSE
           </h2>
           <div className="r_head_bottom">
-            <p style={{ color: "gray" }}>
+            <p style={{ color: "white", fontSize:"0.8rem", letterSpacing:"0.1rem", marginBottom:"2rem" }}>
               Something really awesome is waiting for you register now to get
               the updates
             </p>

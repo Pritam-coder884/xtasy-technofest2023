@@ -1,10 +1,11 @@
 .regpage{
-    margin-top: -2rem;
     display: flex;
     height: 54rem;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     color: #F5EBB5;
     font-family: Reuben;
+    overflow-y: hidden;
     .left_section{
         width: 60%;
         background: #1A2D26;

@@ -28,8 +28,8 @@ const ProfileTop = ({setEvents}) => {
             }
           },
         );
-        const getData=response.data.data;
-          // console.log(getData)
+        const getData=response.data.data[0];
+          console.log(getData)
         const eventData = await axios.get(`${process.env.REACT_APP_API_URL}/api/event/registeredEvents`,{
           headers : {
             Authorization : `Bearer ${accessToken}`

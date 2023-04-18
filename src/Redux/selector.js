@@ -8,3 +8,13 @@ export const selectCulturalEvents = (state) => {
     return events.filter((event) => event.eventType === "Cultural")
 }
 
+export const selectFunEvents = (state) => {
+    let events = state.custom.eventList;
+    return events.filter((event) => event.eventType === "Fun")
+}
+
+export const selectWorkshopEvents = (state) => {
+    let events = state.custom.eventList;
+    return events.filter((event) => event.eventType === "Workshop")
+}
+

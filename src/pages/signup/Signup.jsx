@@ -4,6 +4,7 @@ import FormInput from "../../component/Form/FormInput";
 import RegImg from "../../component/ImgReg/ImgReg";
 import { toast, ToastContainer } from "react-toastify";
 import {useNavigate} from "react-router-dom"
+
 import { useSelector } from "react-redux";
 import axios from "axios";
 
@@ -33,7 +34,7 @@ const Signup = () => {
     // console.log(userRegister);
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/user/updateDetails",
+        `${process.env.REACT_APP_API_URL}/api/user/updateDetails`,
         userRegister,
         {
           headers : {

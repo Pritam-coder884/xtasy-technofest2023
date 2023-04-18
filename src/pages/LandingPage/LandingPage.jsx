@@ -6,6 +6,7 @@ import Footer from "../../component/Footer/Footer";
 import Profile from "../../component/ProfileTop/ProfileTop";
 
 const LandingPage = () => {
+
   return (
     <div>
       <HomeTop />

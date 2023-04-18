@@ -19,8 +19,7 @@ const HomeTop = () => {
           </div>
           <div className="firstcontent__content">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              expedita fugiat, eveniet minima maxime deserunt.
+            The rise of millennials
             </p>
           </div>
         </div>
@@ -45,14 +44,10 @@ const HomeTop = () => {
           <img className="img2" src={radio} alt="img2" />
         </div>
         <div className="secondContent">
-          <h1>KNOW THE MIRACLE</h1>
+          <h1>Feel the miracle</h1>
           <div className="firstcontent__content">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              rem odio quos accusantium deserunt fugiat alias nam ipsam ea
-              corporis eveniet cumque, consectetur nobis ut in. Repudiandae
-              culpa perferendis veritatis consequuntur saepe fuga soluta
-              voluptate delectus dolorum. Quibusdam, perferendis neque.
+            Our university is hosting a techno cult fest featuring a variety of events and competitions centered around technology and culture. Students can participate in coding challenges, tech quizzes, and creative contests such as digital art and short film making. The fest also includes talks by industry experts and workshops on emerging technologies.
             </p>
           </div>
         </div>

@@ -5,19 +5,16 @@ import Img from "../../Assets/images/demo.png";
 import Sponsors from "./Sponsors";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import {fetchAllEvents} from '../../Redux/customSlice'
 import axios from "axios";
 const Homepage = () => {
   const dispatch = useDispatch();
-  const {eventList} = useSelector((state)=>state.custom)    
-
+  const {eventList} = useSelector((state)=>state.custom)
+  console.log("IN HOme page")
   useEffect(()=>{
-    const fetchAllEvents = async() => {
-      const {data} = await axios.get("https://xtasy-backend.onrender.com/api/event/getAllEvents")
-      console.log(data)
-      // dispatch
-    }
-    fetchAllEvents()
-  })
+    dispatch(fetchAllEvents())
+    console.log(eventList)
+  },[])
 
   return (
     <>
@@ -25,8 +22,7 @@ const Homepage = () => {
         <div className="partOne">
           <div className="headingEvents">EXCITING EVENTS FOR YOU</div>
           <div className="content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
-            tenetur ipsa est. Sit, debitis consequatur.
+          Join us and enjoy the most awaited fest of the year
           </div>
           <div className="clock">
             <img src={clockImg} alt="" className="clockimg" />
@@ -34,7 +30,7 @@ const Homepage = () => {
         </div>
         <div className="partTwo">
           <div className="cardContainer">
-          <Link to="/funEvents" ><div className='eventCards' style={{backgroundImage:`url(./posters/Tech.png)`, backgroundSize:"cover"}}>
+          <Link to="/techEvents" ><div className='eventCards' style={{backgroundImage:`url(./posters/Tech.png)`, backgroundSize:"cover"}}>
                     <div className='cardText'>
                         <div>Tech</div>
                         <div>Events</div>
@@ -50,13 +46,13 @@ const Homepage = () => {
                 </Link>
           </div>
           <div className="cardContainer">
-          <Link to="/techEvents" ><div className='eventCards' style={{backgroundImage:`url(./posters/Workshop.png)`, backgroundSize:"cover"}}>
+          <Link to="/workshops" ><div className='eventCards' style={{backgroundImage:`url(./posters/Workshop.png)`, backgroundSize:"cover"}}>
                     <div className='cardText'>
                         <div>Workshop</div>
                     </div>
                 </div>
                 </Link>
-                <Link to="/workshops" ><div className='eventCards' style={{backgroundImage:`url(./posters/Fun.png)`, backgroundSize:"cover"}}>
+                <Link to="/funEvents" ><div className='eventCards' style={{backgroundImage:`url(./posters/Fun.png)`, backgroundSize:"cover"}}>
                     <div className='cardText'>
                         <div>Fun</div>
                         <div>Events</div>

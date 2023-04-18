@@ -9,8 +9,13 @@ import Modal from "../../component/modals/Modal";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { technical } from "../../eventsData/technical"
+import { useSelector } from "react-redux";
 
 const Events = (props) => {
+  
+  const {isLoading} = useSelector((state) => state.custom.isLoading);
+ 
+  
   const [show, setShow] = useState(false);
   const [modalId, setModalId] = useState(null);
   const [modalDescription , setModalDescription] = useState("");
@@ -29,6 +34,15 @@ const Events = (props) => {
   useEffect(()=>{
     window.scrollTo(0, 0);
   },[pathname])
+
+
+  if(isLoading) {
+    console.log(isLoading)
+    return <></>
+  }
+
+ const eventsNow = props.events;
+
   return (
     <>
       <Modal key={modalId} show={show} handleClose={handleClose} handleOutsideClick={handleOutsideClick} >{modalDescription}</Modal>
@@ -46,9 +60,9 @@ const Events = (props) => {
       <div className="event-cards-1">
         <div className="all-1">
           <div className="cards-1">
-            {technical.map((event,index) => {
+            {(eventsNow?eventsNow : technical).map((event,index) => {
               return (
-                <EventCards key={event.id} name={event.eventName} desc={event} handleClick={handleClick} img={index + 1}/>
+                <EventCards key={event.id} name={event.eventName} desc={event} handleClick={handleClick} img={props.text === 'TECHNICAL EVENTS' ? event.id : 35}/>
               )
             })}
           </div>

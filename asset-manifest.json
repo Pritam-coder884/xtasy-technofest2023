@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/xtasy-technofest2023/static/css/main.81293a0c.css",
-    "main.js": "/xtasy-technofest2023/static/js/main.c64f4f77.js",
+    "main.css": "/xtasy-technofest2023/static/css/main.9900822a.css",
+    "main.js": "/xtasy-technofest2023/static/js/main.599e9ce7.js",
     "static/js/787.a9c950d2.chunk.js": "/xtasy-technofest2023/static/js/787.a9c950d2.chunk.js",
     "static/media/demo.png": "/xtasy-technofest2023/static/media/demo.be50db0f09eaa88615e1.png",
     "static/media/proj.png": "/xtasy-technofest2023/static/media/proj.e07efa76f8498ffb6a38.png",
@@ -14,12 +14,12 @@
     "static/media/xtasy.png": "/xtasy-technofest2023/static/media/xtasy.093231d363274db0f8be.png",
     "static/media/appleLogo.jpg": "/xtasy-technofest2023/static/media/appleLogo.7c80d9b964da6c2f942d.jpg",
     "index.html": "/xtasy-technofest2023/index.html",
-    "main.81293a0c.css.map": "/xtasy-technofest2023/static/css/main.81293a0c.css.map",
-    "main.c64f4f77.js.map": "/xtasy-technofest2023/static/js/main.c64f4f77.js.map",
+    "main.9900822a.css.map": "/xtasy-technofest2023/static/css/main.9900822a.css.map",
+    "main.599e9ce7.js.map": "/xtasy-technofest2023/static/js/main.599e9ce7.js.map",
     "787.a9c950d2.chunk.js.map": "/xtasy-technofest2023/static/js/787.a9c950d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.81293a0c.css",
-    "static/js/main.c64f4f77.js"
+    "static/css/main.9900822a.css",
+    "static/js/main.599e9ce7.js"
   ]
 }

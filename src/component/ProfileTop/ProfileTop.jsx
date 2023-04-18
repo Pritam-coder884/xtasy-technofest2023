@@ -43,7 +43,8 @@ const ProfileTop = ({setEvents}) => {
         setRegdno(getData.registrationNumber);
         
         const getId=getData?._id.substring(getData._id.length-7)
-        setXtasyid(getId);
+        
+        if(getId)setXtasyid(getId);
 
       } catch (err) {
         throw new Error(err.message);

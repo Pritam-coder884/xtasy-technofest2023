@@ -29,20 +29,20 @@ const ProfileTop = ({setEvents}) => {
           },
         );
         const getData=response.data.data;
-          console.log(getData)
+          // console.log(getData)
         const eventData = await axios.get(`${process.env.REACT_APP_API_URL}/api/event/registeredEvents`,{
           headers : {
             Authorization : `Bearer ${accessToken}`
           }
         })
         setEvents(eventData.data.data)
-        console.log(eventData.data.data)
+        // console.log(eventData.data.data)
         setName(getData.name);
         setEmail(getData.firebaseUid);
         setPhoneno(getData.phoneNumber);
         setRegdno(getData.registrationNumber);
         
-        const getId=getData._id.substring(getData._id.length-7)
+        const getId=getData?._id.substring(getData._id.length-7)
         setXtasyid(getId);
 
       } catch (err) {

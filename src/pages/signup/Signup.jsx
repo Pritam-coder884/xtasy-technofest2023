@@ -34,7 +34,7 @@ const Signup = () => {
     }
     // console.log(userRegister);
     try {
-      const response = await axios.post(
+        axios.post(
         `${process.env.REACT_APP_API_URL}/api/user/updateDetails`,
         userRegister,
         {
@@ -42,8 +42,9 @@ const Signup = () => {
               Authorization : `Bearer ${accessToken}`
           }
         },
-      );
-      nav("/profile");
+      ).then((data) => {
+        nav("/profile");
+      });
     } catch (err) {
       throw new Error(err.message);
     }

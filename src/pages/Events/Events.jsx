@@ -65,10 +65,10 @@ const Events = (props) => {
       <div className="event-cards-1">
         <div className="all-1">
           <div className="cards-1">
-            {(eventsNow?eventsNow : technical).map((event,index) => {
+            {(eventsNow).map((event,index) => {
+              {console.log(eventsNow)}
               return (
-              
-                <EventCards key={event.id} name={event.eventName} desc={event} handleClick={handleClick} img={props.text === 'TECHNICAL EVENTS' ? event.id : 35}/>)
+                <EventCards key={event.id} name={event.eventName} desc={event} handleClick={handleClick} img={event.id}/>)
             
             })}
           </div>

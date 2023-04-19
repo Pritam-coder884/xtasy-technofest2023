@@ -21,7 +21,7 @@ const ProfileTop = ({setEvents}) => {
         accessToken = localStorage.getItem("token")
       }
         const response = await axios.get(
-          `http://43.205.194.46:4000//api/user/details`,
+          `https://aryashreyas.me/api/user/details`,
           { 
             headers : {
                 Authorization : `Bearer ${accessToken}`
@@ -30,7 +30,7 @@ const ProfileTop = ({setEvents}) => {
         );
         const getData=response.data.data;
           console.log(getData)
-        const eventData = await axios.get(`http://43.205.194.46:4000/api/event/registeredEvents`,{
+        const eventData = await axios.get(`https://aryashreyas.me/api/event/registeredEvents`,{
           headers : {
             Authorization : `Bearer ${accessToken}`
           }

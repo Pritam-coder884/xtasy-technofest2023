@@ -50,14 +50,14 @@ const Gauth = () => {
       // );
 
       
-      const url = `http://43.205.194.46:4000/api/auth/signup`;
+      const url = `https://aryashreyas.me/api/auth/signup`;
 			const { data } = await axios.post(url, userAuth);
 
       // console.log(data.data) 
       const accesstoken=data.data;
       dispatch(updateAccessToken(accesstoken))
       localStorage.setItem("token" , accesstoken)
-      
+      toast.success("registered successfully");
       
       nav("/register");
     } catch (err) {
@@ -120,6 +120,7 @@ const Gauth = () => {
               type="email"
               required
               name="email"
+              pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$"
               value={userAuth.email}
               onChange={handleAuthChange}
             />

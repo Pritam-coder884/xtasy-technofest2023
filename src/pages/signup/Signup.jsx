@@ -35,7 +35,7 @@ const Signup = () => {
     // console.log(userRegister);
     try {
         axios.post(
-        `http://43.205.194.46:4000/api/user/updateDetails`,
+        `https://aryashreyas.me/api/user/updateDetails`,
         userRegister,
         {
           headers : {
@@ -43,6 +43,7 @@ const Signup = () => {
           }
         },
       ).then((data) => {
+        toast.success("user data updated successfully");
         nav("/profile");
       });
     } catch (err) {

@@ -7,7 +7,6 @@ import Profile from "../../component/ProfileTop/ProfileTop";
 import axios from "axios";
 
 const LandingPage = () => {
-  // useEffect(() => axios.get("http://43.205.194.46:4000/api/event/getAllEvents").then((data)=>console.log(data)),[])
   return (
     <div>
       <HomeTop />

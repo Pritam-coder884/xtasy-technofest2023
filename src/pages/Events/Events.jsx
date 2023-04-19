@@ -11,10 +11,19 @@ import { useLocation } from "react-router-dom";
 import { technical } from "../../eventsData/technical"
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllEvents } from "../../Redux/customSlice";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const Events = (props) => {
-  
-  const {isLoading} = useSelector((state) => state.custom.isLoading);
+  const override = {
+    display: "block",
+    margin: "2rem auto",
+    width: "50px",
+    height: "50px",
+    border: "3px solid #EA662F",
+    borderRadius: "50%",
+    borderTopColor: "#fff",
+  };
+  const isLoading = useSelector((state) => state.custom.isLoading);
   const dispatch = useDispatch()
   
   const [show, setShow] = useState(false);
@@ -37,14 +46,11 @@ const Events = (props) => {
   },[pathname])
 
   useEffect(() => {
+    console.log(isLoading);
     dispatch(fetchAllEvents())
   },[])
 
 
-  if(isLoading) {
-    // console.log(isLoading)
-    return <></>
-  }
 
  const eventsNow = props.events;
 
@@ -64,14 +70,22 @@ const Events = (props) => {
       </div>
       <div className="event-cards-1">
         <div className="all-1">
-          <div className="cards-1">
+        {isLoading && <ClipLoader
+              color={'#EA662F'}
+              loading={isLoading}
+              cssOverride={override}
+              size={150}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />}
+            {(!isLoading) && <div className="cards-1">
             {(eventsNow).map((event,index) => {
               {console.log(eventsNow)}
               return (
                 <EventCards key={event.id} name={event.eventName} desc={event} handleClick={handleClick} img={event.id}/>)
             
             })}
-          </div>
+          </div>}
         </div>
       </div>
       <Footer />

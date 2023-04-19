@@ -11,14 +11,14 @@ import axios from "axios";
 const Signup = () => {
  const nav=useNavigate();
 
+ const {accessToken, email} = useSelector((state)=>state.custom)
   const [userRegister, setUserRegister] = useState({
     name: "",
-    email: "",
+    email: email,
     phoneNumber: "",
     whatsappNumber: "",
     registrationNumber: "",
   });
-  const {accessToken} = useSelector((state)=>state.custom)
 
 
 
@@ -92,8 +92,7 @@ const Signup = () => {
               type="email"
               required
               name="email"
-              value={userRegister.email}
-              onChange={handleRegisterChange}
+              value={email}
             />
 
             <FormInput

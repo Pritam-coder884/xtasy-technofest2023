@@ -7,6 +7,7 @@ const initialState = {
     userEventList:[],
     isLoading : false,
     isProfileLoading : false,
+    email:"",
     error : ""
 }
 
@@ -37,7 +38,10 @@ const customSlice = createSlice({
     initialState,
     reducers : {
         updateAccessToken: (state, action) => {state.accessToken = action.payload},
-        updateEventList: (state, action) => {state.eventList = action.payload}
+        updateEventList: (state, action) => {state.eventList = action.payload},
+        setUserLoadingTrue : (state,action) => {state.isProfileLoading = true},
+        setUserLoadingFalse : (state,action) => {state.isProfileLoading = false},
+        setEmail : (state,action) => {state.email=action.payload}
     },
     extraReducers : (build) => {
         build.addCase(fetchAllEvents.fulfilled , (state,action)=> {
@@ -65,6 +69,6 @@ const customSlice = createSlice({
     }
 })
 
-export const {updateAccessToken,updateEventList} = customSlice.actions
+export const {updateAccessToken,updateEventList, setUserLoadingTrue, setUserLoadingFalse,setEmail} = customSlice.actions
 
 export default customSlice.reducer

@@ -8,11 +8,12 @@ import { toast, ToastContainer } from "react-toastify";
 import { auth, provider } from "../../utils/firbase/firebase.utils";
 import Logout from "./Logout.jsx";
 import FormInput from "../../component/Form/FormInput";
-import { updateAccessToken } from "../../Redux/customSlice";
+import { updateAccessToken , setEmail} from "../../Redux/customSlice";
 
 const Gauth = () => {
   const dispatch = useDispatch();
   const { accessToken } = useSelector((state) => state.custom);
+  const [showRegister, setShowRegister] = useState(true)
 
   const nav = useNavigate();
   const [userAuth, setUserAuth] = useState({
@@ -50,7 +51,7 @@ const Gauth = () => {
       // );
 
       
-      const url = `https://aryashreyas.me/api/auth/signup`;
+      const url = "https://aryashreyas.me/api/auth/signup";
 			const { data } = await axios.post(url, userAuth);
 
       // console.log(data.data) 
@@ -58,25 +59,32 @@ const Gauth = () => {
       dispatch(updateAccessToken(accesstoken))
       localStorage.setItem("token" , accesstoken)
       toast.success("registered successfully");
-      
+      dispatch(setEmail(userAuth.email))
       nav("/register");
     } catch (err) {
+      
+      toast.error("Already Registerd! Login")
       throw new Error(err.message);
     }
     
   };
+  const handletoggle = () => {
+    setShowRegister((prev)=> !prev)
+  }
   const handleClickLogin=async(e)=>{
     e.preventDefault();
     try{
-      const url = `${process.env.REACT_APP_API_URL}/api/auth/login`
+      const url = 'https://aryashreyas.me/api/auth/login'
       const {data} = await axios.post(url , userAuth)
 
       const accesstoken=data.data;
       dispatch(updateAccessToken(accesstoken))
       localStorage.setItem("token" , data.data)
+      toast.success("Logging in...")
       nav("/profile")
     } catch(error){
-      throw new Error(error.message);
+      toast.error("Please register first!")
+      // throw new Error(error.message);
     }
   }
 
@@ -133,13 +141,21 @@ const Gauth = () => {
               onChange={handleAuthChange}
             />
             <div style={{display:"flex",width:"25rem"}}>
+              {showRegister && 
+              <>
               <button className="submitbtn" onClick={handleClickLogin} >
                 Login
               </button>
-              <button className="submitbtn" onClick={handleClickRegister}>
+              </>}
+              {(!showRegister) && <button className="submitbtn" onClick={handleClickRegister}>
                 Register
-              </button>
+              </button>}
+              
             </div>
+            <div>
+              {showRegister && <p style={{fontSize:"20px", fontFamily:"sans-serif"}}>Not Registered yet? <span onClick={handletoggle} style={{textDecoration:"underline"}}>Register Here</span></p>}
+              {(!showRegister) && <p style={{fontSize:"20px", fontFamily:"sans-serif"}}>Already Registered? <span onClick={handletoggle} style={{textDecoration:"underline"}}>Login Here</span></p>}
+              </div>
           </form>
         </div>
       </div>

@@ -78,6 +78,10 @@ button{
     align-items: center;
 }
 
+.all-1{
+    min-height: 80vh;
+}
+
 @media(max-width:1033px){
     .all-1{
         display: flex;

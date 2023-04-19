@@ -12,14 +12,14 @@ const initialState = {
 
 // fetch all events
 export const fetchAllEvents = createAsyncThunk("events/fetchAllEvents" , async ()=> {
-    const {data} = await axios.get( "https://xtasy-backend.onrender.com/api/event/getAllEvents")
+    const {data} = await axios.get( "http://43.205.194.46:4000/api/event/getAllEvents")
     return data.data
 })
 
 // fetch events for user
 export const fetchUserEvents = createAsyncThunk("events/fetchUserEvents", async(name, thunkAPI) => {
     const state = thunkAPI.getState();
-    const {data} = await axios.get("http://localhost:4000/api/user/details",{
+    const {data} = await axios.get("http://43.205.194.46:4000/api/user/details",{
         headers: {
           'Content-Type': 'application/json',
           'Authorization' : state.custom.accessToken

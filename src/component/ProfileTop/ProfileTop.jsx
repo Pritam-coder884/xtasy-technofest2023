@@ -5,6 +5,7 @@ import axios from "axios";
 import { ClipLoader } from 'react-spinners';
 import { setUserLoadingFalse,setUserLoadingTrue } from '../../Redux/customSlice';
 import { useNavigate } from 'react-router-dom';
+import user from "../../Assets/images/user.png"
 
 const ProfileTop = ({setEvents}) => {
   const override = {
@@ -102,6 +103,7 @@ const handleLogout = () => {
       <div className="profileCard">
         <div className='profileImgContainer'>
           <div className='profileImg'>
+          <img className="userImg" src={user} alt="user img" />
           </div>
           <div  class="logout123"style={{ display: "flex", justifyContent: "center", paddingTop: "2rem" }}>
             <button onClick={handleLogout} style={{ marginBottom: "0rem" }}>Logout</button>

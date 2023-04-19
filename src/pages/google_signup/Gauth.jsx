@@ -50,7 +50,7 @@ const Gauth = () => {
       // );
 
       
-      const url = `http://43.205.194.46:4000//api/auth/signup`;
+      const url = `http://43.205.194.46:4000/api/auth/signup`;
 			const { data } = await axios.post(url, userAuth);
 
       // console.log(data.data) 

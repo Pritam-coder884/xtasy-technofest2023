@@ -35,7 +35,7 @@ const Signup = () => {
     // console.log(userRegister);
     try {
         axios.post(
-        `${process.env.REACT_APP_API_URL}/api/user/updateDetails`,
+        `http://43.205.194.46:4000/api/user/updateDetails`,
         userRegister,
         {
           headers : {

@@ -18,7 +18,7 @@ const Modal = ({ handleClose, show, children, handleOutsideClick, size, events }
   const accessToken = localStorage.getItem("token")
 
   const handleRegister = async(eventId) => {
-   const {status} = await axios.post(`${process.env.REACT_APP_API_URL}/api/event/registerEvent/${eventId}` , {} , {
+   const {status} = await axios.post(`http://43.205.194.46:4000/api/event/registerEvent/${eventId}` , {} , {
       headers : {
         Authorization : `Bearer ${accessToken}`
       }
